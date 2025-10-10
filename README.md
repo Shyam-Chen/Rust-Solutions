@@ -1,48 +1,48 @@
-# Component Starter
+# Rust 777
 
-:carousel_horse: A boilerplate for Web Components to help build microservices development.
+- 變數 (Variables)
+- 資料型別 (Data Types)
+- 智慧指標 (Smart Pointers)
 
-## Create Web Components
+---
 
-```sh
-$ git clone --depth=1 https://github.com/Shyam-Chen/Component-Starter awesome-components
-$ cd awesome-components
-$ pnpm install
-```
+# 排序
 
-## Install in Projects
-
-```ts
-.
-├── awesome-components
-└── <PROJECT_NAME>
-```
-
-```js
-{
-  "name": "<PROJECT_NAME>",
-  "dependencies": {
-    "awesome-components": "link:../awesome-components"
-  }
+```rs
+fn main() {
+    let mut vec = vec![1, 30, 4, 21, 100000];
+    vec.sort();
+    println!("{vec:?}");
+    // [1, 4, 21, 30, 100000]
 }
 ```
 
-## Examples
-
-- [Vue](./examples/vue)
-- [Svelte](./examples/svelte)
-- [React](./examples/react)
-- [Angular](./examples/angular)
-
-```sh
-$ pnpm install
-$ pnpm build
-
-$ cd examples/vue
-$ cd examples/svelte
-$ cd examples/react
-$ cd examples/angular
-
-$ pnpm install
-$ pnpm dev
+```rs
+fn main() {
+    let mut vec = vec![1, 30, 4, 21, 100000];
+    vec.sort_by(|a, b| b.cmp(a));
+    println!("{vec:?}");
+    // [100000, 30, 21, 4, 1]
+}
 ```
+
+```rs
+fn main() {
+    let mut fruits = vec!["Apple", "pear", "Banana", "orange"];
+    fruits.sort_by_key(|s| s.to_lowercase());
+    println!("{fruits:?}");
+    // ["Apple", "Banana", "orange", "pear"]
+}
+```
+
+---
+
+# 伺服器端應用
+
+`axum`
+
+---
+
+# 嵌入式裝置應用
+
+Raspberry Pi 5 + `gpio-cdev`
