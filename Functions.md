@@ -74,6 +74,44 @@ fn main() {
 }
 ```
 
-## 實作 impl
+## 實作
+
+impl
+
+```rs
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    // 關聯函式（不需要 self）
+    fn new(width: u32, height: u32) -> Self {
+        Self { width, height }
+    }
+
+    // 方法（需要 self）
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    // 方法（需要 self）
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle::new(30, 50);
+    let rect2 = Rectangle::new(10, 40);
+
+    println!("rect1 面積 = {}", rect1.area());
+    // rect1 面積 = 1500
+    println!("rect1 可以裝 rect2 嗎？ {}", rect1.can_hold(&rect2));
+    // rect1 可以裝 rect2 嗎？ true
+}
+```
 
 ## 特徵 trait
+
+## 泛型

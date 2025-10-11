@@ -79,11 +79,56 @@ fn main() {
 }
 ```
 
-##
+## 字串
 
-## struct
+### 靜態字串
 
-## enum
+### 動態字串
+
+## 陣列
+
+### 靜態陣列
+
+### 動態陣列
+
+#### 排序
+
+```rs
+fn main() {
+    let mut vec = vec![1, 30, 4, 21, 100000];
+    vec.sort();
+    println!("{vec:?}");
+    // [1, 4, 21, 30, 100000]
+}
+```
+
+```rs
+fn main() {
+    let mut vec = vec![1, 30, 4, 21, 100000];
+    vec.sort_by(|a, b| b.cmp(a));
+    println!("{vec:?}");
+    // [100000, 30, 21, 4, 1]
+}
+```
+
+```rs
+fn main() {
+    let mut fruits = vec!["Apple", "pear", "Banana", "orange"];
+    fruits.sort_by_key(|s| s.to_lowercase());
+    println!("{fruits:?}");
+    // ["Apple", "Banana", "orange", "pear"]
+}
+```
+
+## 元組
+
+## 結構 (Structures)
+
+struct
+
+## 列舉 (Enums)
+
+enum
 
 ## union
 

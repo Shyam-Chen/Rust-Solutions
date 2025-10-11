@@ -1,50 +1,21 @@
 # Rust Solutions
 
-🦀
+🦀 Rust 101
 
 ---
 
-## Rust Programming
+## 程式設計 (Programming)
 
-- 變數 (Variables)
-- 資料型別 (Data Types)
-- 函式 (Functions)
-- 控制流程 (Control Flow)
-- ...
+- [變數 (Variables)](./Variables.md)
+- [資料型別 (Data Types)](./DataTypes.md)
+- [函式 (Functions)](./Functions.md)
+- [控制流程 (Control Flow)](./ControlFlow.md)
+- 模組 (Modules)
+- 作用域 (Scopes)
+- 屬性 (Attributes)
+- 巨集 (Macros)
 - 智慧指標 (Smart Pointers)
-
----
-
-## ...
-
-### 排序
-
-```rs
-fn main() {
-    let mut vec = vec![1, 30, 4, 21, 100000];
-    vec.sort();
-    println!("{vec:?}");
-    // [1, 4, 21, 30, 100000]
-}
-```
-
-```rs
-fn main() {
-    let mut vec = vec![1, 30, 4, 21, 100000];
-    vec.sort_by(|a, b| b.cmp(a));
-    println!("{vec:?}");
-    // [100000, 30, 21, 4, 1]
-}
-```
-
-```rs
-fn main() {
-    let mut fruits = vec!["Apple", "pear", "Banana", "orange"];
-    fruits.sort_by_key(|s| s.to_lowercase());
-    println!("{fruits:?}");
-    // ["Apple", "Banana", "orange", "pear"]
-}
-```
+- 測試 (Testing)
 
 ---
 
@@ -52,12 +23,17 @@ fn main() {
 
 ---
 
-## 伺服器端應用
+## 伺服器端網頁應用 (Server-side Web Applications)
 
 `axum`
 
+- hello-world
+- jwt + auth
+- mongodb + crud operations
+- minio + file-uploads
+
 ---
 
-## 嵌入式裝置應用
+## 嵌入式裝置應用 (Embedded Device Applications)
 
 Raspberry Pi 5 + `gpio-cdev`
