@@ -1,12 +1,23 @@
-# Rust 777
+# Rust Solutions
+
+🦀
+
+---
+
+## Rust Programming
 
 - 變數 (Variables)
 - 資料型別 (Data Types)
+- 函式 (Functions)
+- 控制流程 (Control Flow)
+- ...
 - 智慧指標 (Smart Pointers)
 
 ---
 
-# 排序
+## ...
+
+### 排序
 
 ```rs
 fn main() {
@@ -37,12 +48,16 @@ fn main() {
 
 ---
 
-# 伺服器端應用
+## 演算法 (Algorithms)
+
+---
+
+## 伺服器端應用
 
 `axum`
 
 ---
 
-# 嵌入式裝置應用
+## 嵌入式裝置應用
 
 Raspberry Pi 5 + `gpio-cdev`
