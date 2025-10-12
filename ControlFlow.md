@@ -1,5 +1,20 @@
 # Control Flow
 
+## If/Else
+
+```rs
+fn main() {
+    let score = 85;
+
+    if score >= 60 {
+        println!("Pass");
+    } else {
+        println!("Fail");
+    }
+}
+// Pass
+```
+
 ```rs
 fn main() {
     let age = 20;
@@ -8,3 +23,11 @@ fn main() {
     // Can vote? Yes
 }
 ```
+
+## Match
+
+## Loops
+
+## While Loops
+
+## For Loops

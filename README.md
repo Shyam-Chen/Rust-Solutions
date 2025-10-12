@@ -1,6 +1,6 @@
 # Rust Solutions
 
-🦀 Rust 101
+🦀 Rust 101 -> 777
 
 ---
 
@@ -13,13 +13,17 @@
 - 模組 (Modules)
 - 作用域 (Scopes)
 - 屬性 (Attributes)
-- 巨集 (Macros)
+- [巨集 (Macros)](./Macros.md)
 - 智慧指標 (Smart Pointers)
 - 測試 (Testing)
 
 ---
 
 ## 演算法 (Algorithms)
+
+- Basic - LeetCode 75
+- Advanced - Top Interview 150
+- Impactful - Top 100 Liked
 
 ---
 

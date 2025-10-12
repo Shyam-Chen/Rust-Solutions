@@ -79,17 +79,43 @@ fn main() {
 }
 ```
 
-## 字串
+## 字串 (Strings)
 
-### 靜態字串
+### 靜態字串 (String Slices)
 
-### 動態字串
+### 動態字串 (Strings)
 
-## 陣列
+```rs
+fn main() {
+    let text = String::from("Hello, World!");
+    println!("{text}");
+    // Hello, World!
 
-### 靜態陣列
+    let mut text = String::new();
+    text.push_str("Hello, World!");
+    println!("{text}");
+    // Hello, World!
 
-### 動態陣列
+    let text = "Hello, World!".to_string();
+    println!("{text}");
+    // Hello, World!
+
+    let text: String = "Hello, World!".into(); // 必須明確指定型別
+    println!("{text}");
+    // Hello, World!
+
+    let world = "World";
+    let hello_world = format!("Hello, {world}!");
+    println!("{hello_world}");
+    // Hello, World!
+}
+```
+
+## 陣列 (Arrays)
+
+### 靜態陣列 (Arrays)
+
+### 動態陣列 (Vectors)
 
 #### 排序
 
@@ -120,7 +146,7 @@ fn main() {
 }
 ```
 
-## 元組
+## 元組 (Tuples)
 
 ## 結構 (Structures)
 
@@ -133,3 +159,25 @@ enum
 ## union
 
 ## static
+
+## 雜湊映射 (Hash Maps)
+
+## 雜湊集合 (Hash Sets)
+
+```rs
+use std::collections::HashSet;
+
+fn main() {
+    let mut set: HashSet<&str> = HashSet::new();
+
+    set.insert("apple");
+    set.insert("banana");
+    set.insert("orange");
+
+    // 重複的元素不會被加入
+    set.insert("apple");
+
+    println!("{set:?}");
+    // {"apple", "banana", "orange"}
+}
+```
