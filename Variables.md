@@ -8,7 +8,7 @@ fn main() {
 }
 ```
 
-### 可變的 (Mutable)
+可變的 (Mutable):
 
 ```rs
 fn main() {
@@ -22,7 +22,7 @@ fn main() {
 }
 ```
 
-# 常數 (Constants)
+## 常數 (Constants)
 
 - 使用全大寫和底線分隔
 - 型別必須明確指定
@@ -39,7 +39,7 @@ fn main() {
 }
 ```
 
-# 遮蔽 (Shadowing)
+## 遮蔽 (Shadowing)
 
 ```rs
 fn main() {
@@ -54,5 +54,43 @@ fn main() {
 
     println!("值為：{val}");
     // 值為：6
+}
+```
+
+## 全域靜態變數 (Global Static Variables)
+
+```rs
+static PI: f64 = 3.141592653589793;
+
+fn main() {
+    println!("{PI}");
+    // 3.141592653589793
+}
+```
+
+可變的 (Mutable):
+
+```rs
+use std::sync::Mutex;
+
+// 建立一個全域變數 COUNTER，包在 Mutex 中
+static COUNTER: Mutex<i32> = Mutex::new(0);
+
+fn main() {
+    {
+        // 鎖定 Mutex，取得可變引用
+        let mut num = COUNTER.lock().unwrap();
+        *num += 1; // 解引用，修改裡面的值
+        println!("目前計數：{}", *num);
+        // 目前計數：1
+    }
+
+    {
+        // 再次鎖定
+        let mut num = COUNTER.lock().unwrap();
+        *num += 1; // 解引用，修改裡面的值
+        println!("目前計數：{}", *num);
+        // 目前計數：2
+    }
 }
 ```

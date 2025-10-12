@@ -115,6 +115,41 @@ fn main() {
 
 ### 靜態陣列 (Arrays)
 
+```rs
+fn main() {
+    let arr = [1, 2, 3, 4, 5]; // 型別推斷為 [i32; 5]
+    println!("{arr:?}");
+    // [1, 2, 3, 4, 5]
+
+    let zeros = [0; 5];
+    println!("{zeros:?}");
+    // [0, 0, 0, 0, 0]
+}
+```
+
+轉成切片:
+
+```rs
+fn main() {
+    let arr = [1, 2, 3, 4, 5];
+    let slice = &arr[1..4];
+    println!("{slice:?}");
+    // [2, 3, 4]
+}
+```
+
+轉成動態陣列:
+
+```rs
+fn main() {
+    let arr = [1, 2, 3, 4, 5];
+    let mut vec = arr.to_vec();
+    vec.push(6);
+    println!("{vec:?}");
+    // [1, 2, 3, 4, 5, 6]
+}
+```
+
 ### 動態陣列 (Vectors)
 
 #### 排序
@@ -155,10 +190,6 @@ struct
 ## 列舉 (Enums)
 
 enum
-
-## union
-
-## static
 
 ## 雜湊映射 (Hash Maps)
 
