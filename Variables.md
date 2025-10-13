@@ -80,7 +80,7 @@ fn main() {
     {
         // 鎖定 Mutex，取得可變引用
         let mut num = COUNTER.lock().unwrap();
-        *num += 1; // 解引用，修改裡面的值
+        *num += 1; // 解引用 (Dereference)，修改裡面的值
         println!("目前計數：{}", *num);
         // 目前計數：1
     }
@@ -88,7 +88,7 @@ fn main() {
     {
         // 再次鎖定
         let mut num = COUNTER.lock().unwrap();
-        *num += 1; // 解引用，修改裡面的值
+        *num += 1; // 解引用 (Dereference)，修改裡面的值
         println!("目前計數：{}", *num);
         // 目前計數：2
     }

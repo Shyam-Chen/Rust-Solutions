@@ -74,7 +74,7 @@ fn main() {
 }
 ```
 
-## 實作
+## 實作 (Implementations)
 
 impl
 
@@ -112,6 +112,117 @@ fn main() {
 }
 ```
 
-## 特徵 trait
+可變的 (Mutable):
+
+```rs
+struct Counter {
+    number: i32,
+}
+
+impl Counter {
+    fn new() -> Self {
+        Counter { number: 0 }
+    }
+
+    fn inc(&mut self) {
+        self.number += 1;
+    }
+
+    fn count(&self) -> i32 {
+        self.number
+    }
+}
+
+fn main() {
+    let mut counter = Counter::new();
+    counter.inc();
+    println!("count = {}", counter.count());
+    // count = 1
+}
+```
+
+## 特徵 (Traits)
+
+用於定義共享的行為。
+
+```rs
+trait Animal {
+    fn sound(&self);
+}
+
+// ---
+
+struct Cat;
+
+impl Animal for Cat {
+    fn sound(&self) {
+        println!("喵 Meow");
+    }
+}
+
+// ---
+
+struct Dog;
+
+impl Animal for Dog {
+    fn sound(&self) {
+        println!("汪 Woof");
+    }
+}
+
+// ---
+
+fn animal_sound_stack(animal: &dyn Animal) {
+    animal.sound();
+}
+
+fn animal_sound_heap(animal: Box<dyn Animal>) {
+    animal.sound();
+}
+
+fn main() {
+    let cat = Cat;
+    let dog = Dog;
+
+    cat.sound(); // 喵 Meow
+    dog.sound(); // 汪 Woof
+
+    animal_sound_stack(&cat); // 喵 Meow
+    animal_sound_stack(&dog); // 汪 Woof
+
+    animal_sound_heap(Box::new(cat)); // 喵 Meow
+    animal_sound_heap(Box::new(dog)); // 汪 Woof
+}
+```
 
 ## 泛型
+
+```rs
+fn add<T: std::ops::Add<Output = T>>(a: T, b: T) -> T {
+    a + b
+}
+
+fn main() {
+    let int_val = add(1, 6);
+    let float_val = add(3.7, 2.1);
+    println!("int_val = {int_val}"); // int_val = 7
+    println!("float_val = {float_val}"); // float_val = 5.800000000000001
+}
+```
+
+```rs
+struct Point<T> {
+    x: T,
+    y: T,
+}
+
+fn main() {
+    let int_point = Point { x: 1, y: 6 };
+    let float_point = Point { x: 3.7, y: 2.1 };
+
+    let dx = float_point.x - int_point.x as f64;
+    let dy = float_point.y - int_point.y as f64;
+    println!("Distance: {}", (dx * dx + dy * dy).sqrt());
+    // Distance: 4.743416490252569
+}
+```

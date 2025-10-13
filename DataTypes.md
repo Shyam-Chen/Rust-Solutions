@@ -185,11 +185,30 @@ fn main() {
 
 ## 結構 (Structures)
 
-struct
-
 ## 列舉 (Enums)
 
-enum
+```rs
+#![allow(dead_code)]
+
+enum Direction {
+    Up,
+    Right,
+    Down,
+    Left,
+}
+
+fn main() {
+    let dir = Direction::Up;
+
+    match dir {
+        Direction::Up => println!("Up"),
+        Direction::Right => println!("Right"),
+        Direction::Down => println!("Down"),
+        Direction::Left => println!("Left"),
+    }
+}
+// Up
+```
 
 ## 雜湊映射 (Hash Maps)
 
