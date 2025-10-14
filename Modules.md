@@ -43,3 +43,11 @@ fn main() {
 ```rs
 $ cargo install cargo-modules --locked
 ```
+
+## 工作空間 (Workspaces)
+
+### `pub(crate)`
+
+### `pub(super)`
+
+### `pub(in path)`

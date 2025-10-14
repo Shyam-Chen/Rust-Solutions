@@ -181,6 +181,69 @@ fn main() {
 }
 ```
 
+#### 疊代器 (Iterators)
+
+```rs
+fn main() {
+    let vec = vec![1, 2, 3];
+
+    for num in vec {
+        println!("{num}");
+    }
+
+    // println!("{vec:?}"); // vec 的所有權在 for 迴圈中被消耗掉 (即已移動)
+}
+```
+
+引用:
+
+```rs
+fn main() {
+    let vec = vec![1, 2, 3];
+
+    for num in &vec { // 引用
+        println!("{num}");
+    }
+
+    println!("{vec:?}");
+}
+```
+
+不可變:
+
+```rs
+fn main() {
+    let vec = vec![1, 2, 3];
+    vec.iter().for_each(|num| println!("{num}"));
+    println!("{vec:?}");
+}
+```
+
+可變:
+
+```rs
+fn main() {
+    let mut vec = vec![1, 2, 3];
+
+    vec.iter_mut().for_each(|num| {
+        *num += 1;
+        println!("{num}");
+    });
+
+    println!("{vec:?}");
+}
+```
+
+同 `for` 迴圈:
+
+```rs
+fn main() {
+    let vec = vec![1, 2, 3];
+    vec.into_iter().for_each(|num| println!("{num}"));
+    // println!("{vec:?}");
+}
+```
+
 ## 元組 (Tuples)
 
 ## 結構 (Structures)
