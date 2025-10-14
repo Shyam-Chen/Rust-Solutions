@@ -1,7 +1,7 @@
 # 模組 (Modules)
 
 ```rs
-// src/math.rs or src/math/mod.rs
+// src/math.rs
 #![allow(dead_code)]
 
 pub fn add(a: i32, b: i32) -> i32 {
@@ -36,4 +36,10 @@ fn main() {
     println!("1 - 6 = {val}");
     // 1 - 6 = -5
 }
+```
+
+## 模組樹
+
+```rs
+$ cargo install cargo-modules --locked
 ```
