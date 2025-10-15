@@ -248,7 +248,28 @@ fn main() {
 
 ## 結構 (Structures)
 
-## 列舉 (Enums)
+## 列舉 (Enumerations)
+
+### 內建列舉
+
+#### `Option`
+
+https://doc.rust-lang.org/std/option/enum.Option.html
+
+```rs
+let some_value: Option<i32> = Some(7); // 表示存在值 7
+let none_value: Option<i32> = None; // 表示值不存在
+```
+
+#### `Result`
+
+https://doc.rust-lang.org/std/result/enum.Result.html
+
+#### `Poll`
+
+https://doc.rust-lang.org/std/task/enum.Poll.html
+
+### 自訂列舉
 
 ```rs
 #![allow(dead_code)]

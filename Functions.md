@@ -76,8 +76,6 @@ fn main() {
 
 ## 實作 (Implementations)
 
-impl
-
 ```rs
 struct Rectangle {
     width: u32,
