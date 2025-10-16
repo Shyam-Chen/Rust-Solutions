@@ -1,12 +1,12 @@
 # 非同步 (Asynchronous)
 
-```rs
+```sh
 $ cargo add futures
 ```
 
 ## (非同步執行階段) Asynchronous Runtime
 
-```rs
+```sh
 $ cargo add tokio -F full
 ```
 

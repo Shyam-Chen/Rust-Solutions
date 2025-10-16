@@ -1,5 +1,5 @@
 # 日期和時間 (Date and Time)
 
-```rs
+```sh
 $ cargo add chrono
 ```

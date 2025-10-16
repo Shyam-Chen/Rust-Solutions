@@ -18,13 +18,14 @@
 - [非同步 (Asynchronous)](./Asynchronous.md)
 - [並行 (Concurrency)](./Concurrency.md)
 - [日期和時間 (Date and Time)](./DateAndTime.md)
-- 測試 (Testing)
+- [正規表達式 (Regular Expressions)](./RegularExpressions.md)
+- [測試 (Testing)](./Testing.md)
 
 ---
 
 ## 演算法 (Algorithms)
 
-- Basic - LeetCode 75
+- [Basic - LeetCode 75](./algorithms-leetcode/Basic.md)
 - Advanced - Top Interview 150
 - Impactful - Top 100 Liked
 
@@ -34,13 +35,13 @@
 
 全域安裝一次:
 
-```rs
+```sh
 $ cargo install cargo-make --locked
 ```
 
 專案下執行:
 
-```rs
+```sh
 $ cargo make dev
 ```
 

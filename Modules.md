@@ -40,7 +40,7 @@ fn main() {
 
 ## 模組樹
 
-```rs
+```sh
 $ cargo install cargo-modules --locked
 ```
 

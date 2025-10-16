@@ -36,6 +36,8 @@ fn main() {
 }
 ```
 
+小數點後兩位:
+
 ```rs
 fn main() {
     let val = 3.14159;
@@ -47,6 +49,16 @@ fn main() {
     let s = format!("{val:.2}");
     println!("{s}");
     // 3.14
+}
+```
+
+可讀性:
+
+```rs
+fn main() {
+    let val = 1_000_000;
+    println!("{val}");
+    // 1000000
 }
 ```
 
@@ -81,7 +93,33 @@ fn main() {
 
 ## 字串 (Strings)
 
-### 靜態字串 (String Slices)
+### 靜態字串 (String Slices) `&str`
+
+```rs
+fn main() {
+    let s = "Hello, World!";
+    println!("{s}");
+    // Hello, World!
+
+    let first_word = &s[0..5];
+    println!("{first_word}");
+    // Hello
+}
+```
+
+當函式的參數只是給內部函式讀取用時:
+
+```rs
+fn greet(name: &str) {
+    println!("Hello, {name}!",);
+}
+
+fn main() {
+    let my_name = String::from("Alice");
+    greet(&my_name); // Hello, Alice!
+    greet("Bob"); // Hello, Bob!
+}
+```
 
 ### 動態字串 (Strings)
 
@@ -151,6 +189,14 @@ fn main() {
 ```
 
 ### 動態陣列 (Vectors)
+
+```rs
+fn main() {
+    let vec = vec![1, 2, 3];
+    println!("{vec:?}");
+    // [1, 2, 3]
+}
+```
 
 #### 排序
 
@@ -246,7 +292,46 @@ fn main() {
 
 ## 元組 (Tuples)
 
+```rs
+fn main() {
+    let point = (3, 4);
+    let x = point.0;  // 訪問第一個元素
+    let y = point.1; // 訪問第二個元素
+    println!("{x}, {y}");
+    // 3, 4
+}
+```
+
+解構 (Destructuring):
+
+```rs
+fn main() {
+    let point = (3, 4);
+    let (x, y) = point;
+    println!("{x}, {y}");
+    // 3, 4
+}
+```
+
+```rs
+fn calculate_point() -> ((i32, i32), f64) {
+    let (x, y) = (3, 4);
+    let distance = ((x * x + y * y) as f64).sqrt();
+    ((x, y), distance)
+}
+
+fn main() {
+    let (point, distance) = calculate_point();
+    println!("{:?}, {}", point, distance);
+    // (3, 4), 5
+}
+```
+
 ## 結構 (Structures)
+
+```rs
+
+```
 
 ## 列舉 (Enumerations)
 
@@ -296,6 +381,20 @@ fn main() {
 
 ## 雜湊映射 (Hash Maps)
 
+```rs
+use std::collections::HashMap;
+
+fn main() {
+    let mut map: HashMap<String, i32> = HashMap::new();
+
+    map.insert("Alice".into(), 60);
+    map.insert("Bob".into(), 70);
+
+    println!("{map:?}");
+    // {"Alice": 60, "Bob": 70}
+}
+```
+
 ## 雜湊集合 (Hash Sets)
 
 ```rs
@@ -313,5 +412,38 @@ fn main() {
 
     println!("{set:?}");
     // {"apple", "banana", "orange"}
+}
+```
+
+## 型別別名 (Type Alias)
+
+```rs
+type Age = u8;
+
+fn print_age(age: Age) {
+    println!("年齡是: {age}");
+}
+
+fn main() {
+    let my_age: Age = 30;
+    print_age(my_age);
+    // 年齡是: 30
+}
+```
+
+```rs
+type Point = (f64, f64);
+
+fn distance(p1: Point, p2: Point) -> f64 {
+    let dx = p2.0 - p1.0;
+    let dy = p2.1 - p1.1;
+    (dx * dx + dy * dy).sqrt()
+}
+
+fn main() {
+    let point1: Point = (0.0, 0.0);
+    let point2: Point = (3.0, 4.0);
+    println!("兩點距離是: {}", distance(point1, point2));
+    // 兩點距離是: 5
 }
 ```
