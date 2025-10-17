@@ -1,4 +1,4 @@
-use crate::solutions::Solution;
+use crate::Solution;
 
 impl Solution {
     pub fn merge_alternately(word1: String, word2: String) -> String {
@@ -24,10 +24,10 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::Solution;
+    use super::*;
 
     #[test]
-    fn test_merge_alternately() {
+    fn merge_alternately() {
         assert_eq!(
             Solution::merge_alternately(String::from("abc"), String::from("pqr")),
             "apbqcr"

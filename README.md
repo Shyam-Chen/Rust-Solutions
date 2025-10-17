@@ -48,18 +48,26 @@ $ cargo make dev
 `axum`
 
 - hello-world
-- jwt + auth + 2fa
-- mongodb + crud operations
-- minio + file uploads
+- JWT (`jsonwebtoken`) + auth
+- `mongodb` + crud operations
+- `minio` + file uploads
+- `redis` + cache + MQ + worker
+- `candle-*` + Hugging Face + `qdrant-client` + Qdrant
 - ...
+- 容器化 + Docker
+- 部署到 Render + MongoDB Atlas + IDrive e2
+- 部署到 Redis Cloud + Render's Background Workers ($)
+- 部署到 Qdrant Managed Cloud
 
 ---
 
 ## 嵌入式裝置應用 (Embedded Device Applications)
 
-Raspberry Pi 5 + `gpio-cdev`
+Raspberry Pi 5 ($) + `gpio-cdev` + $$
 
 - 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
-- LED Matrix
+- 8x8 LED 點矩陣 (8x8 LED Matrix)
 - ...
-- Robot Arm Kit for Raspberry Pi
+- 機械手臂 (Robot Arm Kit for Raspberry Pi)
+- 相機 (Raspberry Pi Camera Module 3) + `libcamera`
+- 觸控螢幕 (Raspberry Pi Display 2) + `tauri`
