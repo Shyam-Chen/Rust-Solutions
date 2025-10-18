@@ -31,6 +31,22 @@
 
 ---
 
+## 命令列應用 (Command Line Applications)
+
+- hello-world
+- Excellent CLI tools
+  - `bat`
+
+---
+
+## 用戶端網頁應用 (Client-side Web Applications)
+
+`leptos` + `web-sys`
+
+- hello-world
+
+---
+
 ## 伺服器端網頁應用 (Server-side Web Applications)
 
 全域安裝一次:
@@ -70,4 +86,6 @@ Raspberry Pi 5 ($) + `gpio-cdev` + $$
 - ...
 - 機械手臂 (Robot Arm Kit for Raspberry Pi)
 - 相機 (Raspberry Pi Camera Module 3) + `libcamera`
-- 觸控螢幕 (Raspberry Pi Display 2) + `tauri`
+- 觸控螢幕 (Raspberry Pi Display 2) + `tauri` + `leptos`
+- `candle-*` + PCIe x4
+  - PLC + NVIDIA RTX A1000 + ATX 電源供應器
