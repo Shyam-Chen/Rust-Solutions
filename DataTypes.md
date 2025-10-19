@@ -5,6 +5,7 @@
 - 整數型別 (Integer Types):
   - 有正負號 (Signed): `i32`
   - 只有正號 (Unsigned): `u32`
+    - `u8`: 0 ~ 255
 - 浮點數型別 (Floating-Point Types): `f64`
 
 ```rs
@@ -93,7 +94,7 @@ fn main() {
 
 ## 字串 (Strings)
 
-### 靜態字串 (String Slices) `&str`
+### 靜態字串, 字串切片 (String Slices) `&str`
 
 ```rs
 fn main() {
@@ -330,7 +331,39 @@ fn main() {
 ## 結構 (Structures)
 
 ```rs
+#[derive(Debug)]
+struct User {
+    username: String,
+    email: String,
+    active: bool,
+}
 
+fn main() {
+    let mut user = User {
+        username: "graydon.hoare".into(),
+        email: "graydon.hoare@outlook.com".into(),
+        active: true,
+    };
+
+    user.email = "graydon.hoare@gmail.com".into();
+
+    println!("username = {}", user.username); // username = graydon.hoare
+    println!("email = {}", user.email); // email = graydon.hoare@gmail.com
+    println!("active = {}", user.active); // active = true
+}
+```
+
+### 元組結構 (Tuple Structures)
+
+```rs
+struct Color(u8, u8, u8);
+
+fn main() {
+    let my_color = Color(128, 64, 255);
+    println!("Red: {}", my_color.0); // Red: 128
+    println!("Green: {}", my_color.1); // Green: 64
+    println!("Blue: {}", my_color.2); // Blue: 255
+}
 ```
 
 ## 列舉 (Enumerations)
@@ -422,6 +455,8 @@ fn main() {
 }
 ```
 
+在 `#[no_std]` 下，需改用 `use hashbrown::HashMap;`。
+
 ## 雜湊集合 (Hash Sets)
 
 ```rs
@@ -441,6 +476,8 @@ fn main() {
     // {"apple", "banana", "orange"}
 }
 ```
+
+在 `#[no_std]` 下，需改用 `use hashbrown::HashSet;`。
 
 ## 型別別名 (Type Alias)
 

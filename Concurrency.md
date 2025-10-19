@@ -44,6 +44,31 @@ fn main() {
 }
 ```
 
+```rs
+use std::sync::Mutex;
+
+// 建立一個全域變數 COUNTER，包在 Mutex 中
+static COUNTER: Mutex<i32> = Mutex::new(0);
+
+fn main() {
+    {
+        // 鎖定 Mutex，取得可變引用
+        let mut num = COUNTER.lock().unwrap();
+        *num += 1; // 解引用 (Dereference)，修改裡面的值
+        println!("目前計數：{}", *num);
+        // 目前計數：1
+    }
+
+    {
+        // 再次鎖定
+        let mut num = COUNTER.lock().unwrap();
+        *num += 1; // 解引用 (Dereference)，修改裡面的值
+        println!("目前計數：{}", *num);
+        // 目前計數：2
+    }
+}
+```
+
 ## 佇列 (Queue) 與 工作執行緒 (Worker) 模型
 
 生產者 (Producer) 與消費者 (Consumer) 模型

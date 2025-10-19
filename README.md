@@ -27,7 +27,7 @@
 
 - [Basic - LeetCode 75](./algorithms-leetcode/Basic.md)
 - Advanced - Top Interview 150
-- Impactful - Top 100 Liked
+- [Impactful - Top 100 Liked](./algorithms-leetcode/Impactful.md)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ---
 
-## 用戶端網頁應用 (Client-side Web Applications)
+## 網頁應用 (Web Applications)
 
 `leptos`
 

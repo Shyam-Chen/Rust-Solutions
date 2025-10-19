@@ -1,9 +1,15 @@
 # 變數 (Variables)
 
+- 使用全小寫和底線分隔
+
 ```rs
 fn main() {
     let val = 7;
     println!("值為：{val}");
+    // 值為：7
+
+    let my_val = 7;
+    println!("值為：{my_val}");
     // 值為：7
 }
 ```
@@ -57,7 +63,7 @@ fn main() {
 }
 ```
 
-## 全域靜態變數 (Global Static Variables)
+## 全域變數 (Global Variables)
 
 ```rs
 static PI: f64 = 3.141592653589793;
@@ -70,27 +76,5 @@ fn main() {
 
 可變的 (Mutable):
 
-```rs
-use std::sync::Mutex;
-
-// 建立一個全域變數 COUNTER，包在 Mutex 中
-static COUNTER: Mutex<i32> = Mutex::new(0);
-
-fn main() {
-    {
-        // 鎖定 Mutex，取得可變引用
-        let mut num = COUNTER.lock().unwrap();
-        *num += 1; // 解引用 (Dereference)，修改裡面的值
-        println!("目前計數：{}", *num);
-        // 目前計數：1
-    }
-
-    {
-        // 再次鎖定
-        let mut num = COUNTER.lock().unwrap();
-        *num += 1; // 解引用 (Dereference)，修改裡面的值
-        println!("目前計數：{}", *num);
-        // 目前計數：2
-    }
-}
-```
+- 單執行緒 (Single-thread) 使用 `RefCell<T>`
+- 多執行緒 (Multi-thread) 使用 `Mutex<T>`
