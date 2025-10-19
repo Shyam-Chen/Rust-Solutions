@@ -36,14 +36,26 @@
 - hello-world
 - Excellent CLI tools
   - `bat`
+  - `oha`
 
 ---
 
 ## 用戶端網頁應用 (Client-side Web Applications)
 
-`leptos` + `web-sys`
+`leptos`
 
 - hello-world
+- Components
+- CSS
+  - Tailwind CSS
+  - Scoped
+- Router
+- 容器化 + Docker
+- 部署到 Render
+- ...
+- `web-sys`
+- ...
+- `tauri`
 
 ---
 
@@ -88,4 +100,5 @@ Raspberry Pi 5 ($) + `gpio-cdev` + $$
 - 相機 (Raspberry Pi Camera Module 3) + `libcamera`
 - 觸控螢幕 (Raspberry Pi Display 2) + `tauri` + `leptos`
 - `candle-*` + PCIe x4
-  - PLC + NVIDIA RTX A1000 + ATX 電源供應器
+  - PLC + NVIDIA RTX A400 + ATX 電源供應器
+- Raspberry Pi Pico 2 + `embassy-rp`

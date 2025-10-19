@@ -350,6 +350,33 @@ let none_value: Option<i32> = None; // 表示值不存在
 
 https://doc.rust-lang.org/std/result/enum.Result.html
 
+```rs
+fn divide(a: f64, b: f64) -> Result<f64, String> {
+    if b == 0.0 {
+        Err(String::from("Division by zero"))
+    } else {
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    let result1 = divide(10.0, 2.0);
+    let result2 = divide(10.0, 0.0);
+
+    match result1 {
+        Ok(val) => println!("Result1: {val}"),
+        Err(err) => println!("Error1: {err}"),
+    }
+
+    match result2 {
+        Ok(val) => println!("Result2: {val}"),
+        Err(err) => println!("Error2: {err}"),
+    }
+}
+// Result1: 5
+// Error2: Division by zero
+```
+
 #### `Poll`
 
 https://doc.rust-lang.org/std/task/enum.Poll.html
