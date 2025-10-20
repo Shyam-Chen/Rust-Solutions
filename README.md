@@ -18,6 +18,7 @@
 - [非同步 (Asynchronous)](./Asynchronous.md)
 - [並行 (Concurrency)](./Concurrency.md)
 - [套件管理器 (Package Manager)](./PackageManager.md)
+- [數學 (Math)](./Math.md)
 - [日期和時間 (Date and Time)](./DateAndTime.md)
 - [正規表達式 (Regular Expressions)](./RegularExpressions.md)
 - [測試 (Testing)](./Testing.md)
@@ -34,7 +35,7 @@
 
 ## 命令列應用 (Command Line Applications)
 
-- hello-world
+- 應用程式 (Application)
 - Excellent CLI tools
   - `bat`
   - `oha`
@@ -43,9 +44,9 @@
 
 ## 網頁應用 (Web Applications)
 
-`leptos`
+Leptos
 
-- hello-world
+- 應用程式 (Application)
 - Components
   - Props / Event handler props
   - Children
@@ -76,21 +77,9 @@
 
 ## 伺服器端網頁應用 (Server-side Web Applications)
 
-全域安裝一次:
+Axum
 
-```sh
-$ cargo install cargo-make --locked
-```
-
-專案下執行:
-
-```sh
-$ cargo make dev
-```
-
-`axum`
-
-- hello-world
+- [Application](./server-axum/Application.md)
 - Router
 - Middleware
 - JWT (`jsonwebtoken`) + auth
@@ -113,9 +102,9 @@ $ cargo make dev
 
 ## 嵌入式裝置應用 (Embedded Device Applications)
 
-Raspberry Pi 5 ($) + `gpio-cdev` + $$
+Raspberry Pi
 
-- 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
+- `gpio-cdev` + 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
 - 8x8 LED 點矩陣 (8x8 LED Matrix)
 - 光敏電阻 / 蜂鳴器 / 紅外線偵測 / 馬達
 - 機械手臂 (Robot Arm Kit for Raspberry Pi)

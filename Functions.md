@@ -193,10 +193,12 @@ fn main() {
 }
 ```
 
-## 泛型
+## 泛型 (Generics)
 
 ```rs
-fn add<T: std::ops::Add<Output = T>>(a: T, b: T) -> T {
+use std::ops::Add;
+
+fn add<T: Add<Output = T>>(a: T, b: T) -> T {
     a + b
 }
 
@@ -222,5 +224,23 @@ fn main() {
     let dy = float_point.y - int_point.y as f64;
     println!("Distance: {}", (dx * dx + dy * dy).sqrt());
     // Distance: 4.743416490252569
+}
+```
+
+```rs
+use std::ops::Mul;
+
+fn double_val<T>(val: T) -> T
+where
+    T: Mul<Output = T> + From<u8>,
+{
+    val * T::from(2)
+}
+
+fn main() {
+    let int_val = 10;
+    let float_val = 7.2;
+    println!("Int doubled: {}", double_val(int_val)); // Int doubled: 20
+    println!("Float doubled: {}", double_val(float_val)); // Float doubled: 14.4
 }
 ```

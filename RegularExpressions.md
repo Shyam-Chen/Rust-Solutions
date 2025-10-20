@@ -6,10 +6,6 @@ $ cargo add regex
 
 ```rs
 use regex::Regex;
-```
-
-```rs
-use regex::Regex;
 
 fn is_valid_email(email: &str) -> bool {
     let email_regex = Regex::new(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$").unwrap();
