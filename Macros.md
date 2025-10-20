@@ -29,3 +29,53 @@ fn main() {
     // Hello, World!
 }
 ```
+
+## 內建
+
+### `todo!`
+
+```rs
+fn foo() {
+    todo!();
+}
+
+fn bar() {
+    todo!("This function needs to be implemented!");
+}
+
+fn main() {
+    foo();
+    bar();
+}
+```
+
+### `file!`
+
+```rs
+fn main() {
+    println!("File: {}", file!());
+    // File: src/main.rs
+}
+```
+
+### `cfg!`
+
+```rs
+fn main() {
+    if cfg!(unix) {
+        println!("Running on Unix!");
+    } else {
+        println!("Not running on Unix!");
+    }
+}
+```
+
+```rs
+fn main() {
+   if cfg!(target_os = "linux") {
+       println!("Running on Linux!");
+   } else {
+       println!("Not running on Linux!");
+   }
+}
+```

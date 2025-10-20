@@ -3,10 +3,25 @@
 ## 數字 (Numbers)
 
 - 整數型別 (Integer Types):
-  - 有正負號 (Signed): `i32`
-  - 只有正號 (Unsigned): `u32`
-    - `u8`: 0 ~ 255
-- 浮點數型別 (Floating-Point Types): `f64`
+  - 有正負號 (Signed):
+    - `i8`: -2<sup>7</sup> ~ 2<sup>7</sup> - 1
+    - `i16`: -2<sup>15</sup> ~ 2<sup>15</sup> - 1
+    - `i32` (預設): -2<sup>31</sup> ~ 2<sup>31</sup> - 1
+    - `i64`: -2<sup>63</sup> ~ 2<sup>63</sup> - 1
+    - `i128`: -2<sup>127</sup> ~ 2<sup>127</sup> - 1
+    - `isize`: -2<sup>n</sup> ~ 2<sup>n</sup> - 1
+      - 在 32 位元系統上，範圍為 -2<sup>31</sup> ~ 2<sup>31</sup> - 1
+      - 在 64 位元系統上，範圍為 -2<sup>63</sup> ~ 2<sup>63</sup> - 1
+  - 只有正號 (Unsigned):
+    - `u8`: 0 ~ 2<sup>8</sup> - 1
+    - `u16`: 0 ~ 2<sup>16</sup> - 1
+    - `u32`: 0 ~ 2<sup>32</sup> - 1
+    - `u64`: 0 ~ 2<sup>64</sup> - 1
+    - `u128`: 0 ~ 2<sup>128</sup> - 1
+    - `usize`: 0 ~ 2<sup>n</sup> - 1
+      - 在 32 位元系統上，範圍為 0 到 2<sup>32</sup> - 1
+      - 在 64 位元系統上，範圍為 0 到 2<sup>64</sup> - 1
+- 浮點數型別 (Floating-Point Types): `f16`, `f32`, `f64` (預設), `f128`
 
 ```rs
 fn main() {

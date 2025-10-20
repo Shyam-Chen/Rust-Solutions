@@ -17,6 +17,7 @@
 - [智慧指標 (Smart Pointers)](./SmartPointers.md)
 - [非同步 (Asynchronous)](./Asynchronous.md)
 - [並行 (Concurrency)](./Concurrency.md)
+- [套件管理器 (Package Manager)](./PackageManager.md)
 - [日期和時間 (Date and Time)](./DateAndTime.md)
 - [正規表達式 (Regular Expressions)](./RegularExpressions.md)
 - [測試 (Testing)](./Testing.md)
@@ -46,16 +47,30 @@
 
 - hello-world
 - Components
+  - Props / Event handler props
+  - Children
+- Reactivity
+  - Signals / Computeds / Effects
 - CSS
   - Tailwind CSS
   - Scoped
 - Router
-- 容器化 + Docker
-- 部署到 Render
-- ...
-- `web-sys`
-- ...
+- `leptos::document();` / `web-sys`
+  - DOM
+- `leptos-use`
+- `charming` (ECharts)
+- 雲端服務部署
+  - 容器化 + Docker
+  - 部署到 Render
+- 雲端平台部署
+  - 容器化全代管部署 + Google Cloud Run / Azure Container Apps
+  - Google Kubernetes Engine / Azure Kubernetes Service
+- 本地部署 (輕量化) + Kubernetes K3s
+  - Raspberry Pi 5
 - `tauri`
+  - Plugins: Notifications
+  - Android + 發布測試版至 Google Play
+  - Windows + 發布測試版至 Microsoft Store
 
 ---
 
@@ -76,16 +91,23 @@ $ cargo make dev
 `axum`
 
 - hello-world
+- Router
+- Middleware
 - JWT (`jsonwebtoken`) + auth
 - `mongodb` + crud operations
 - `minio` + file uploads
 - `redis` + cache + MQ + worker
 - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
-- ...
-- 容器化 + Docker
-- 部署到 Render + MongoDB Atlas + IDrive e2
-- 部署到 Redis Cloud + Render's Background Workers ($)
-- 部署到 Qdrant Managed Cloud
+- 雲端服務部署
+  - 容器化 + Docker
+  - 部署到 Render + MongoDB Atlas + IDrive e2
+  - 部署到 Redis Cloud + Render's Background Workers ($)
+  - 部署到 Qdrant Managed Cloud
+- 雲端平台部署
+  - 容器化全代管部署 + Google Cloud Run / Azure Container Apps
+  - Google Kubernetes Engine / Azure Kubernetes Service + Helm
+- 本地部署 (輕量化) + Kubernetes K3s
+  - Raspberry Pi 5 + NVIDIA RTX A400
 
 ---
 
@@ -95,7 +117,7 @@ Raspberry Pi 5 ($) + `gpio-cdev` + $$
 
 - 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
 - 8x8 LED 點矩陣 (8x8 LED Matrix)
-- ...
+- 光敏電阻 / 蜂鳴器 / 紅外線偵測 / 馬達
 - 機械手臂 (Robot Arm Kit for Raspberry Pi)
 - 相機 (Raspberry Pi Camera Module 3) + `libcamera`
 - 觸控螢幕 (Raspberry Pi Display 2) + `tauri` + `leptos`

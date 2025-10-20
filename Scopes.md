@@ -31,6 +31,50 @@ fn main() {
 }
 ```
 
+```rs
+fn main() {
+    let value = Some(String::from("Hello, World!"));
+
+    match &value {
+        Some(text) => println!("借用裡面的值: {text}"),
+        None => println!("值為 None"),
+    }
+
+    println!("value 還可以被訪問: {value:?}");
+}
+// 借用裡面的值: Hello, World!
+// value 還可以被訪問: Some("Hello, World!")
+```
+
+```rs
+use std::f64::consts::PI;
+
+trait Shape {
+    fn area(&self) -> f64;
+}
+
+struct Circle {
+    radius: f64,
+}
+
+impl Shape for Circle {
+    fn area(&self) -> f64 {
+        PI * self.radius * self.radius
+    }
+}
+
+fn print_area(shape: &dyn Shape) {
+    println!("面積: {}", shape.area());
+}
+
+fn main() {
+    let circle = Circle { radius: 2.0 };
+    let shape: &dyn Shape = &circle; // 借用一個 Circle 型別，作為 dyn Shape 使用
+    print_area(shape); // 傳遞引用給函式
+    // 面積: 12.566370614359172
+}
+```
+
 ### 複製 (克隆, Clone)
 
 ```rs

@@ -21,7 +21,7 @@ pub fn div(a: i32, b: i32) -> i32 {
 }
 
 #[cfg(test)]
-mod math_tests {
+mod tests {
     // 將測試模組置於 super 命名空間，讓我們可以呼叫外部定義的函式
     use super::*;
 
@@ -51,4 +51,8 @@ mod math_tests {
         div(5, 0); // 此操作會 panic
     }
 }
+```
+
+```rs
+$ cargo test
 ```
