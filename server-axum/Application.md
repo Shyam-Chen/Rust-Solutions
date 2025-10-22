@@ -33,7 +33,7 @@ $ curl --request GET --url http://localhost:3000/hello-world
 Hello, World!
 ```
 
----
+## 開發模式
 
 全域安裝一次:
 
@@ -41,8 +41,33 @@ Hello, World!
 $ cargo install cargo-make --locked
 ```
 
+建立 `Makefile.toml`:
+
+```toml
+# Makefile.toml
+[tasks.dev]
+command = "cargo"
+args = ["run"]
+watch = true
+```
+
 專案下執行:
 
 ```sh
 $ cargo make dev
+```
+
+將 World 改成 Rust 查看變化:
+
+```rs
+// src/main.rs
+
+async fn hello_world() -> String {
+    "Hello, Rust!".to_string()
+}
+```
+
+```sh
+$ curl --request GET --url http://localhost:3000/hello-world
+Hello, Rust!
 ```

@@ -46,7 +46,7 @@
 
 Leptos
 
-- 應用程式 (Application)
+- [應用程式 (Application)](./web-leptos/Application.md)
 - Components
   - Props / Event handler props
   - Children
@@ -61,17 +61,19 @@ Leptos
 - `leptos-use`
 - `charming` (ECharts)
 - 雲端服務部署
-  - 容器化 + Docker
+  - 容器化 + Caddy Server + Docker
   - 部署到 Render
 - 雲端平台部署
   - 容器化全代管部署 + Google Cloud Run / Azure Container Apps
   - Google Kubernetes Engine / Azure Kubernetes Service
 - 本地部署 (輕量化) + Kubernetes K3s
-  - Raspberry Pi 5
+  - Raspberry Pi 5 Model B
 - `tauri`
   - Plugins: Notifications
-  - Android + 發布測試版至 Google Play
-  - Windows + 發布測試版至 Microsoft Store
+  - Android + 發布至 Google Play (Closed Testing)
+  - Windows + 發布至 Microsoft Store (Package Flights)
+  - iOS + 發布至 App Store (Apple TestFlight)
+  - macOS + 發布至 App Store (Apple TestFlight)
 
 ---
 
@@ -79,7 +81,7 @@ Leptos
 
 Axum
 
-- [Application](./server-axum/Application.md)
+- [應用程式 (Application)](./server-axum/Application.md)
 - Router
 - Middleware
 - JWT (`jsonwebtoken`) + auth
@@ -87,16 +89,18 @@ Axum
 - `minio` + file uploads
 - `redis` + cache + MQ + worker
 - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
+- 伺服器端算繪 (Server-side Rendering)
+  - `leptos`
 - 雲端服務部署
   - 容器化 + Docker
   - 部署到 Render + MongoDB Atlas + IDrive e2
-  - 部署到 Redis Cloud + Render's Background Workers ($)
+  - 部署到 Redis Cloud + Render's Background Workers
   - 部署到 Qdrant Managed Cloud
 - 雲端平台部署
   - 容器化全代管部署 + Google Cloud Run / Azure Container Apps
   - Google Kubernetes Engine / Azure Kubernetes Service + Helm
 - 本地部署 (輕量化) + Kubernetes K3s
-  - Raspberry Pi 5 + NVIDIA RTX A400
+  - Raspberry Pi 5 Model B + NVIDIA RTX A400
 
 ---
 
@@ -110,6 +114,5 @@ Raspberry Pi
 - 機械手臂 (Robot Arm Kit for Raspberry Pi)
 - 相機 (Raspberry Pi Camera Module 3) + `libcamera`
 - 觸控螢幕 (Raspberry Pi Display 2) + `tauri` + `leptos`
-- `candle-*` + PCIe x4
-  - PLC + NVIDIA RTX A400 + ATX 電源供應器
+- `candle-*` + Raspberry Pi 5 Model B + NVIDIA RTX A400
 - Raspberry Pi Pico 2 + `embassy-rp`

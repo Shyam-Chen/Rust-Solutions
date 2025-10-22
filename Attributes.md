@@ -145,6 +145,36 @@ fn main() {
 
 ### `#[inline]`
 
+將函式建議執行內嵌展開。
+
+```rs
+#[inline]
+fn add(x: i32, y: i32) -> i32 {
+    x + y
+}
+
+fn main() {
+    let result = add(7, 3);
+    println!("結果是 {result}");
+}
+```
+
+將函式 `add` 被標記為 `#[inline]`，建議編譯器在呼叫 `add` 時，直接將此函式的程式碼展開進入 `main` 函式內。
+
+內嵌化的好處通常是減少函式呼叫的開銷，避免產生函式堆疊框架 (stack frame) 的開銷。
+
+如果編譯器選擇內嵌 `add` 函式，在 `main` 的執行過程可以被重寫為:
+
+```rs
+fn main() {
+    let result = 7 + 3;
+    println!("結果是 {result}");
+}
+```
+
+- `#[inline(always)]`: 建議始終執行內嵌展開
+- `#[inline(never)]`: 建議永不執行內嵌展開
+
 ### `#[cfg]` 和 `#[cfg_attr]`
 
 ### `#[non_exhaustive]`
