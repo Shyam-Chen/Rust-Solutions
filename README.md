@@ -1,6 +1,6 @@
 # Rust Solutions
 
-🦀 Rust 101 -> 777
+🦀 Rust 101 -> Open Source -> Business
 
 ---
 
@@ -35,7 +35,13 @@
 
 ## 命令列應用 (Command Line Applications)
 
-- 應用程式 (Application)
+Clap
+
+- [應用程式 (Application)](./command-line/Application.md)
+- 表格 (Tables)
+- 進度條 (Progress Bars)
+- 顏色 (Colors)
+- 提示字元 (Prompts)
 - Excellent CLI tools
   - `bat`
   - `oha`
