@@ -22,6 +22,8 @@ fn main() {
 
 ### 借用 (引用)
 
+不可變借用 `&T`:
+
 ```rs
 fn main() {
     let s1 = String::from("Hello");
@@ -30,6 +32,24 @@ fn main() {
     println!("{s2}, World!"); // 使用借用的 s2
 }
 ```
+
+可變借用 `&mut T`:
+
+```rs
+fn add_suffix(text: &mut String) {
+    text.push_str(", World!");
+}
+
+fn main() {
+    let mut msg = String::from("Hello");
+    add_suffix(&mut msg); // 將 msg 的可變借用傳遞給函式
+    println!("{msg}");
+}
+```
+
+借用參考:
+
+`ref T` -> `match &T`
 
 ```rs
 fn main() {
@@ -45,6 +65,10 @@ fn main() {
 // 借用裡面的值: Hello, World!
 // value 還可以被訪問: Some("Hello, World!")
 ```
+
+動態分派 `&dyn`:
+
+建立特徵的動態引用。
 
 ```rs
 use std::f64::consts::PI;

@@ -385,7 +385,7 @@ fn main() {
 
 ### 內建列舉
 
-#### `Option`
+#### `Option<T>`
 
 https://doc.rust-lang.org/std/option/enum.Option.html
 
@@ -394,7 +394,7 @@ let some_value: Option<i32> = Some(7); // 表示存在值 7
 let none_value: Option<i32> = None; // 表示值不存在
 ```
 
-#### `Result`
+#### `Result<T, E>`
 
 https://doc.rust-lang.org/std/result/enum.Result.html
 
@@ -425,7 +425,7 @@ fn main() {
 // Error2: Division by zero
 ```
 
-#### `Poll`
+#### `Poll<T>`
 
 https://doc.rust-lang.org/std/task/enum.Poll.html
 

@@ -55,6 +55,8 @@ fn main() {
 // 二
 ```
 
+守衛:
+
 ```rs
 fn main() {
     let number = 7;
@@ -163,4 +165,99 @@ fn main() {
 // 2
 // 3
 // 結束
+```
+
+## `if let`
+
+```rs
+fn main() {
+    let my_val = Some(7);
+
+    if let Some(val) = my_val {
+        println!("有找到值: {val}");
+    } else {
+        println!("沒找到值");
+    }
+}
+// 有找到值: 7
+```
+
+相當於:
+
+```rs
+fn main() {
+    let my_val = Some(7);
+
+    match my_val {
+        Some(val) => println!("有找到值: {val}"),
+        None => println!("沒找到值"),
+    }
+}
+// 有找到值: 7
+```
+
+省略 `else` 分支:
+
+```rs
+fn main() {
+    let my_val = Some(7);
+
+    if let Some(val) = my_val {
+        println!("有找到值: {val}");
+    }
+    // 不用處理 None，直接省略了 else
+}
+// 有找到值: 7
+```
+
+```rs
+fn main() {
+    let my_val = Some(7);
+
+    if let Some(val) = my_val
+        && val > 0
+    {
+        println!("有找到值且大於零: {val}");
+    }
+}
+// 有找到值且大於零: 7
+```
+
+用於:
+
+- 解構 `Option<T>` 的值
+- 簡化 `Result<T, E>` 的條件處理
+- 避免使用過長的 `match` 語句
+
+## `while let`
+
+```rs
+fn main() {
+    let mut stack = vec![1, 2, 3];
+
+    while let Some(top) = stack.pop() {
+        println!("彈出元素: {top}");
+    }
+}
+// 彈出元素: 3
+// 彈出元素: 2
+// 彈出元素: 1
+```
+
+相當於:
+
+```rs
+fn main() {
+    let mut stack = vec![1, 2, 3];
+
+    loop {
+        match stack.pop() {
+            Some(top) => println!("彈出元素: {top}"),
+            None => break,
+        }
+    }
+}
+// 彈出元素: 3
+// 彈出元素: 2
+// 彈出元素: 1
 ```

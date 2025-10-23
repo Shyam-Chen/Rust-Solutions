@@ -1,6 +1,6 @@
 # Rust Solutions
 
-🦀 Rust 101 -> Open Source -> Business
+🦀 Rust Journey: From Zero to Hero, Open Source to Business Applications
 
 ---
 
@@ -27,6 +27,23 @@
 
 ## 演算法 (Algorithms)
 
+- Beginning - Algorithms
+  - 陣列 (Array)
+  - 鏈結串列 (Linked List)
+  - 堆疊 (Stack)
+  - 佇列 (Queue)
+  - 雜湊表 (Hash Table)
+  - 樹 (Tree)
+  - 堆積 (Heap)
+  - 圖 (Graph)
+  - 字典樹 (Trie)
+  - 排序 (Sorting)
+  - 搜尋 (Searching)
+  - 分治 (Divide and Conquer)
+  - 回溯 (Backtracking)
+  - 動態規劃 (Dynamic Programming)
+  - 貪婪 (Greedy)
+  - 位元操作 (Bit Manipulation)
 - [Basic - LeetCode 75](./algorithms-leetcode/Basic.md)
 - Advanced - Top Interview 150
 - [Impactful - Top 100 Liked](./algorithms-leetcode/Impactful.md)
@@ -62,10 +79,13 @@ Leptos
   - Tailwind CSS
   - Scoped
 - Router
+- State Management
 - `leptos::document();` / `web-sys`
   - DOM
 - `leptos-use`
 - `charming` (ECharts)
+- 伺服器端算繪 (Server-side Rendering)
+  - `axum`
 - 雲端服務部署
   - 容器化 + Caddy Server + Docker
   - 部署到 Render
@@ -95,7 +115,7 @@ Axum
 - `minio` + file uploads
 - `redis` + cache + MQ + worker
 - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
-- 伺服器端算繪 (Server-side Rendering)
+- 全端 (Full-stack)
   - `leptos`
 - 雲端服務部署
   - 容器化 + Docker
