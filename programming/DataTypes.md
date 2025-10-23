@@ -91,6 +91,8 @@ fn main() {
 
 ## 字元 (Characters)
 
+使用單引號 `'` 表示。
+
 ```rs
 fn main() {
     let c = 'c';
@@ -110,6 +112,10 @@ fn main() {
 ## 字串 (Strings)
 
 ### 靜態字串, 字串切片 (String Slices) `&str`
+
+https://doc.rust-lang.org/stable/std/primitive.str.html
+
+使用雙引號 `"` 表示。
 
 ```rs
 fn main() {
@@ -138,6 +144,8 @@ fn main() {
 ```
 
 ### 動態字串 (Strings)
+
+https://doc.rust-lang.org/stable/std/string/index.html
 
 ```rs
 fn main() {
@@ -168,6 +176,8 @@ fn main() {
 ## 陣列 (Arrays)
 
 ### 靜態陣列 (Arrays)
+
+https://doc.rust-lang.org/stable/std/primitive.array.html
 
 ```rs
 fn main() {
@@ -205,6 +215,8 @@ fn main() {
 ```
 
 ### 動態陣列 (Vectors)
+
+https://doc.rust-lang.org/stable/std/vec/index.html
 
 ```rs
 fn main() {
@@ -307,6 +319,8 @@ fn main() {
 ```
 
 ## 元組 (Tuples)
+
+https://doc.rust-lang.org/stable/std/primitive.tuple.html
 
 ```rs
 fn main() {

@@ -27,8 +27,8 @@
 
 ## 演算法 (Algorithms)
 
-- Beginning - Algorithms
-  - 陣列 (Array)
+- [Beginning - Algorithms](./algorithms/Beginning.md)
+  - [陣列 (Array)](./algorithms/Beginning.md#陣列-array)
   - 鏈結串列 (Linked List)
   - 堆疊 (Stack)
   - 佇列 (Queue)
@@ -45,7 +45,7 @@
   - 貪婪 (Greedy)
   - 位元操作 (Bit Manipulation)
 - [Basic - LeetCode 75](./algorithms/Basic.md)
-- Advanced - Top Interview 150
+- [Advanced - Top Interview 150](./algorithms/Advanced.md)
 - [Impactful - Top 100 Liked](./algorithms/Impactful.md)
 
 ---
