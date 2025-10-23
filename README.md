@@ -6,22 +6,22 @@
 
 ## 程式設計 (Programming)
 
-- [變數 (Variables)](./Variables.md)
-- [資料型別 (Data Types)](./DataTypes.md)
-- [函式 (Functions)](./Functions.md)
-- [控制流程 (Control Flow)](./ControlFlow.md)
-- [模組 (Modules)](./Modules.md)
-- [作用域 (Scopes)](./Scopes.md)
-- [屬性 (Attributes)](./Attributes.md)
-- [巨集 (Macros)](./Macros.md)
-- [智慧指標 (Smart Pointers)](./SmartPointers.md)
-- [非同步 (Asynchronous)](./Asynchronous.md)
-- [並行 (Concurrency)](./Concurrency.md)
-- [套件管理器 (Package Manager)](./PackageManager.md)
-- [數學 (Math)](./Math.md)
-- [日期和時間 (Date and Time)](./DateAndTime.md)
-- [正規表達式 (Regular Expressions)](./RegularExpressions.md)
-- [測試 (Testing)](./Testing.md)
+- [變數 (Variables)](./programming/Variables.md)
+- [資料型別 (Data Types)](./programming/DataTypes.md)
+- [函式 (Functions)](./programming/Functions.md)
+- [控制流程 (Control Flow)](./programming/ControlFlow.md)
+- [模組 (Modules)](./programming/Modules.md)
+- [作用域 (Scopes)](./programming/Scopes.md)
+- [屬性 (Attributes)](./programming/Attributes.md)
+- [巨集 (Macros)](./programming/Macros.md)
+- [智慧指標 (Smart Pointers)](./programming/SmartPointers.md)
+- [非同步 (Asynchronous)](./programming/Asynchronous.md)
+- [並行 (Concurrency)](./programming/Concurrency.md)
+- [套件管理器 (Package Manager)](./programming/PackageManager.md)
+- [數學 (Math)](./programming/Math.md)
+- [日期和時間 (Date and Time)](./programming/DateAndTime.md)
+- [正規表達式 (Regular Expressions)](./programming/RegularExpressions.md)
+- [測試 (Testing)](./programming/Testing.md)
 
 ---
 
@@ -44,9 +44,9 @@
   - 動態規劃 (Dynamic Programming)
   - 貪婪 (Greedy)
   - 位元操作 (Bit Manipulation)
-- [Basic - LeetCode 75](./algorithms-leetcode/Basic.md)
+- [Basic - LeetCode 75](./algorithms/Basic.md)
 - Advanced - Top Interview 150
-- [Impactful - Top 100 Liked](./algorithms-leetcode/Impactful.md)
+- [Impactful - Top 100 Liked](./algorithms/Impactful.md)
 
 ---
 
@@ -69,7 +69,7 @@ Clap
 
 Leptos
 
-- [應用程式 (Application)](./web-leptos/Application.md)
+- [應用程式 (Application)](./web/Application.md)
 - Components
   - Props / Event handler props
   - Children
@@ -103,11 +103,11 @@ Leptos
 
 ---
 
-## 伺服器端網頁應用 (Server-side Web Applications)
+## 伺服器應用 (Server Applications)
 
 Axum
 
-- [應用程式 (Application)](./server-axum/Application.md)
+- [應用程式 (Application)](./server/Application.md)
 - Router
 - Middleware
 - JWT (`jsonwebtoken`) + auth
@@ -130,7 +130,7 @@ Axum
 
 ---
 
-## 嵌入式裝置應用 (Embedded Device Applications)
+## 嵌入式應用 (Embedded Applications)
 
 Raspberry Pi
 

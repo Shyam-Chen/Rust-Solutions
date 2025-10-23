@@ -489,7 +489,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "server-axum"
+name = "server"
 version = "0.1.0"
 dependencies = [
  "axum",
