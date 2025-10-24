@@ -140,7 +140,71 @@ fn main() {
 
 ## 鏈結串列 (Linked List)
 
+### 單向鏈結串列 (Singly Linked List)
+
+Rust 不允許「遞迴型別」沒有間接層 (indirection)，因為編譯器不知道 `ListNode` 的大小是多少 (它裡面又包含另一個 `ListNode`，無限展開)，所以需使用 `Box<ListNode>`:
+
+- `Box<T>` 是一個固定大小的「指標」
+- 指向堆積 (Heap) 上真實儲存的 `T`
+
+```rs
+#[derive(PartialEq, Eq, Clone, Debug)]
+pub struct ListNode<T> {
+    pub value: T,
+    pub next: Option<Box<ListNode<T>>>,
+}
+
+impl<T> ListNode<T> {
+    #[inline]
+    pub fn new(value: T) -> Self {
+        ListNode { value, next: None }
+    }
+}
+```
+
+```rs
+fn main() {
+    let mut head = None;
+
+    for value in ["E", "D", "C", "B", "A"] {
+        head = Some(Box::new(ListNode { value, next: head }));
+    }
+
+    let mut current = head.as_ref();
+
+    while let Some(node) = current {
+        print!("{}", node.value);
+
+        if node.next.is_some() {
+            print!(" -> ");
+        }
+
+        current = node.next.as_ref();
+    }
+
+    println!();
+}
+// A -> B -> C -> D -> E
+```
+
+#### 雙指標 (Two Pointers)
+
+找出鏈結串列的中間節點:
+
+- 慢指標每次移動一步
+- 快指標每次移動兩步
+
+```rs
+
+```
+
+### 環狀鏈結串列 (Circular Linked List)
+
+### 雙向鏈結串列 (Doubly Linked List)
+
 ## 堆疊 (Stack)
+
+以後進先出 (Last In, First Out，LIFO) 為原則。
 
 ## 佇列 (Queue)
 

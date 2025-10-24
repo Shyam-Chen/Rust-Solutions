@@ -29,7 +29,7 @@
 
 - [Beginning - Algorithms](./algorithms/Beginning.md)
   - [陣列 (Array)](./algorithms/Beginning.md#陣列-array)
-  - 鏈結串列 (Linked List)
+  - [鏈結串列 (Linked List)](./algorithms/Beginning.md#鏈結串列-linked-list)
   - 堆疊 (Stack)
   - 佇列 (Queue)
   - 雜湊表 (Hash Table)
@@ -82,10 +82,12 @@ Leptos
 - State Management
 - `leptos::document();` / `web-sys`
   - DOM
+- 製作 UI 元件
 - `leptos-use`
 - `charming` (ECharts)
 - 伺服器端算繪 (Server-side Rendering)
   - `axum`
+  - 後設資料 (Metadata)
 - 雲端服務部署
   - 容器化 + Caddy Server + Docker
   - 部署到 Render
@@ -95,7 +97,8 @@ Leptos
 - 本地部署 (輕量化) + Kubernetes K3s
   - Raspberry Pi 5 Model B
 - `tauri`
-  - Plugins: Notifications
+  - Plugins
+    - Notifications
   - Android + 發布至 Google Play (Closed Testing)
   - Windows + 發布至 Microsoft Store (Package Flights)
   - iOS + 發布至 App Store (Apple TestFlight)
@@ -115,8 +118,11 @@ Axum
 - `minio` + file uploads
 - `redis` + cache + MQ + worker
 - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
+- Streams
+- WebSocket
 - 全端 (Full-stack)
   - `leptos`
+- 提供服務使用 GraphQL (`async-graphql`)
 - 雲端服務部署
   - 容器化 + Docker
   - 部署到 Render + MongoDB Atlas + IDrive e2
@@ -126,7 +132,7 @@ Axum
   - 容器化全代管部署 + Google Cloud Run / Azure Container Apps
   - Google Kubernetes Engine / Azure Kubernetes Service + Helm
 - 本地部署 (輕量化) + Kubernetes K3s
-  - Raspberry Pi 5 Model B + NVIDIA RTX A400
+  - Raspberry Pi 5 Model B
 
 ---
 
@@ -140,5 +146,8 @@ Raspberry Pi
 - 機械手臂 (Robot Arm Kit for Raspberry Pi)
 - 相機 (Raspberry Pi Camera Module 3) + `libcamera`
 - 觸控螢幕 (Raspberry Pi Display 2) + `tauri` + `leptos`
-- `candle-*` + Raspberry Pi 5 Model B + NVIDIA RTX A400
-- Raspberry Pi Pico 2 + `embassy-rp`
+- AI 模型推理 + `candle-*`
+- 微控制器 (Raspberry Pi Pico 2) + `embassy-rp`
+  - Yahboom Sensor Kit
+- UART 串列通訊
+- MQTT 通訊協定

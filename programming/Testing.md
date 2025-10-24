@@ -56,3 +56,17 @@ mod tests {
 ```rs
 $ cargo test
 ```
+
+## 整合測試
+
+`tests` 目錄:
+
+```coffee
+.
+├── src
+│   └── ...
+├── tests
+│   └── ...
+├── Cargo.lock
+└── Cargo.toml
+```
