@@ -200,23 +200,174 @@ fn main() {
 
 ### 環狀鏈結串列 (Circular Linked List)
 
+```rs
+
+```
+
 ### 雙向鏈結串列 (Doubly Linked List)
+
+```rs
+use std::collections::LinkedList;
+
+fn main() {
+    // 建立一個空的 LinkedList
+    let mut list: LinkedList<String> = LinkedList::new();
+
+    // 插入元素
+    list.push_back("A".into());
+    list.push_back("B".into());
+    list.push_back("C".into());
+    list.push_front("D".into());
+
+    // 打印整個 LinkedList
+    println!("List: {list:?}"); // List: ["D", "A", "B", "C"]
+
+    // 查看頭尾元素
+    println!("Front: {:?}", list.front()); // Front: Some("D")
+    println!("Back: {:?}", list.back()); // Back: Some("C")
+
+    // 移除元素
+    list.pop_front();
+    list.pop_back();
+
+    // 打印移除元素後的整個 LinkedList
+    println!("After pop: {list:?}"); // After pop: ["A", "B"]
+
+    let mut list2: LinkedList<String> = LinkedList::new();
+    list2.push_back("E".into());
+    list2.push_back("F".into());
+
+    list.append(&mut list2);
+
+    // 打印附加 list2 後的整個 LinkedList
+    println!("After append: {list:?}"); // After append: ["A", "B", "E", "F"]
+}
+```
 
 ## 堆疊 (Stack)
 
 以後進先出 (Last In, First Out，LIFO) 為原則。
 
+```rs
+#[derive(Debug)]
+pub struct Stack<T> {
+    items: Vec<T>,
+}
+
+impl<T> Stack<T> {
+    pub fn new() -> Self {
+        Stack { items: Vec::new() }
+    }
+
+    // 將元素加入堆疊
+    pub fn push(&mut self, item: T) {
+        self.items.push(item);
+    }
+
+    // 移除並返回堆疊頂部的元素
+    pub fn pop(&mut self) -> Option<T> {
+        self.items.pop()
+    }
+
+    // 查看堆疊頂部的元素
+    pub fn peek(&self) -> Option<&T> {
+        self.items.last()
+    }
+
+    // 檢查堆疊是否為空
+    pub fn is_empty(&self) -> bool {
+        self.items.is_empty()
+    }
+
+    // 返回堆疊中的元素數量
+    pub fn size(&self) -> usize {
+        self.items.len()
+    }
+
+    // 清空堆疊
+    pub fn clear(&mut self) {
+        self.items.clear();
+    }
+}
+```
+
+```rs
+fn main() {
+    let mut stack = Stack::new();
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    println!("{:?}", stack.peek()); // Some(30)
+    println!("{:?}", stack.pop()); // Some(30)
+    println!("{:?}", stack.size()); // 2
+    println!("{:?}", stack.is_empty()); // false
+    stack.clear();
+    println!("{:?}", stack.is_empty()); // true
+}
+```
+
+基於鏈結串列 (Linked List) 實現:
+
+```rs
+
+```
+
 ## 佇列 (Queue)
+
+以先進先出 (First In First Out，FIFO) 為原則。
+
+```rs
+use std::collections::VecDeque;
+```
 
 ## 雜湊表 (Hash Table)
 
-## 樹 (Tree)
+```rs
+use std::collections::HashMap;
+```
+
+```rs
+use std::collections::HashSet;
+```
+
+```rs
+use hashbrown::{HashMap, HashSet};
+```
+
+## 二元樹 (Binary Tree)
+
+```rs
+use std::cell::RefCell;
+use std::rc::Rc;
+
+#[derive(Debug, PartialEq, Eq)]
+pub struct TreeNode<T> {
+    pub value: T,
+    pub left: Option<Rc<RefCell<TreeNode<T>>>>,
+    pub right: Option<Rc<RefCell<TreeNode<T>>>>,
+}
+
+impl<T> TreeNode<T> {
+    #[inline]
+    pub fn new(value: T) -> Self {
+        TreeNode {
+            value,
+            left: None,
+            right: None,
+        }
+    }
+}
+```
+
+## 二元搜尋樹 (Binary Search Tree)
+
+## 平衡樹 (AVL / Red-Black Tree)
 
 ## 堆積 (Heap)
 
-## 圖 (Graph)
-
 ## 字典樹 (Trie)
+
+## 圖 (Graph)
 
 ## 排序 (Sorting)
 

@@ -18,6 +18,7 @@
 - [非同步 (Asynchronous)](./programming/Asynchronous.md)
 - [並行 (Concurrency)](./programming/Concurrency.md)
 - [套件管理器 (Package Manager)](./programming/PackageManager.md)
+- [錯誤處理 (Error Handling)](./programming/ErrorHandling.md)
 - [數學 (Math)](./programming/Math.md)
 - [日期和時間 (Date and Time)](./programming/DateAndTime.md)
 - [正規表達式 (Regular Expressions)](./programming/RegularExpressions.md)
@@ -27,16 +28,18 @@
 
 ## 演算法 (Algorithms)
 
-- [Beginning - Algorithms](./algorithms/Beginning.md)
+- [Beginning - Data Structures and Algorithms](./algorithms/Beginning.md)
   - [陣列 (Array)](./algorithms/Beginning.md#陣列-array)
   - [鏈結串列 (Linked List)](./algorithms/Beginning.md#鏈結串列-linked-list)
-  - 堆疊 (Stack)
-  - 佇列 (Queue)
+  - [堆疊 (Stack)](./algorithms/Beginning.md#堆疊-stack)
+  - [佇列 (Queue)](./algorithms/Beginning.md#佇列-queue)
   - 雜湊表 (Hash Table)
-  - 樹 (Tree)
+  - 二元樹 (Binary Tree)
+  - 二元搜尋樹 (Binary Search Tree)
+  - 平衡樹 (AVL / Red-Black Tree)
   - 堆積 (Heap)
-  - 圖 (Graph)
   - 字典樹 (Trie)
+  - 圖 (Graph)
   - 排序 (Sorting)
   - 搜尋 (Searching)
   - 分治 (Divide and Conquer)
@@ -114,6 +117,7 @@ Axum
 - Router
 - Middleware
 - JWT (`jsonwebtoken`) + auth
+  - 密碼雜湊 (hashing) + `argon2`
 - `mongodb` + crud operations
 - `minio` + file uploads
 - `redis` + cache + MQ + worker
@@ -123,6 +127,7 @@ Axum
 - 全端 (Full-stack)
   - `leptos`
 - 提供服務使用 GraphQL (`async-graphql`)
+- Email
 - 雲端服務部署
   - 容器化 + Docker
   - 部署到 Render + MongoDB Atlas + IDrive e2
@@ -148,6 +153,6 @@ Raspberry Pi
 - 觸控螢幕 (Raspberry Pi Display 2) + `tauri` + `leptos`
 - AI 模型推理 + `candle-*`
 - 微控制器 (Raspberry Pi Pico 2) + `embassy-rp`
-  - Yahboom Sensor Kit
+- 感測器套件 (Yahboom Sensor Kit)
 - UART 串列通訊
-- MQTT 通訊協定
+- MQTT 通訊協定 + `rumqttc`

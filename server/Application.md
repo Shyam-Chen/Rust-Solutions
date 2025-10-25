@@ -71,3 +71,33 @@ async fn hello_world() -> String {
 $ curl --request GET --url http://localhost:3000/hello-world
 Hello, Rust!
 ```
+
+---
+
+序列化和反序列化:
+
+```sh
+$ cargo add serde -F derive
+```
+
+```rs
+use serde::{Deserialize, Serialize};
+
+#[derive(Deserialize, Serialize)]
+struct HelloWorld {
+    message: String,
+}
+```
+
+---
+
+發送開通初始密碼:
+
+```rs
+use rand::distr::{Alphanumeric, SampleString};
+
+fn main() {
+    let string = Alphanumeric.sample_string(&mut rand::rng(), 16);
+    println!("Random string: {string}");
+}
+```
