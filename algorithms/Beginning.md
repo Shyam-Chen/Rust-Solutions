@@ -198,12 +198,6 @@ fn main() {
 
 ```
 
-### 環狀鏈結串列 (Circular Linked List)
-
-```rs
-
-```
-
 ### 雙向鏈結串列 (Doubly Linked List)
 
 ```rs
@@ -318,6 +312,93 @@ fn main() {
 
 ```rs
 use std::collections::VecDeque;
+
+fn main() {
+    let mut queue = VecDeque::new();
+
+    // 入列
+    queue.push_back("A");
+    queue.push_back("B");
+    queue.push_back("C");
+
+    // 處理最先入列的資料
+    while let Some(front) = queue.pop_front() {
+        println!("Processing: {front}");
+    }
+}
+// Processing: A
+// Processing: B
+// Processing: C
+```
+
+### 滑動視窗 (Sliding Window)
+
+```rs
+use std::collections::VecDeque;
+
+fn main() {
+    // 宣告容量為 3 的 VecDeque 作為滑動視窗
+    let mut sliding_window = VecDeque::with_capacity(3);
+
+    // 模擬資料流的輸入
+    let stream_data = vec![1, 2, 3, 4, 5];
+
+    for data in stream_data {
+        // 保持視窗的大小，超過容量時移除最舊的數據
+        if sliding_window.len() == sliding_window.capacity() {
+            sliding_window.pop_front();
+        }
+
+        // 新資料推入視窗
+        sliding_window.push_back(data);
+
+        // 此時可以使用滑動視窗進行一些操作
+        println!("當前滑動視窗: {sliding_window:?}");
+    }
+}
+// 當前滑動視窗: [1]
+// 當前滑動視窗: [1, 2]
+// 當前滑動視窗: [1, 2, 3]
+// 當前滑動視窗: [2, 3, 4]
+// 當前滑動視窗: [3, 4, 5]
+```
+
+加上操作:
+
+```rs
+use std::collections::VecDeque;
+
+fn main() {
+    // 宣告容量為 3 的 VecDeque 作為滑動視窗
+    let mut sliding_window = VecDeque::with_capacity(3);
+
+    // 模擬資料流的輸入
+    let stream_data = vec![1, 2, 3, 4, 5];
+
+    // 宣告用來追蹤滑動視窗元素總和的變數
+    let mut window_sum = 0;
+
+    for data in stream_data {
+        // 保持視窗的大小，超過容量時移除最舊的數據
+        if sliding_window.len() == sliding_window.capacity() {
+            if let Some(removed) = sliding_window.pop_front() {
+                window_sum -= removed; // 從總和中扣掉被移除的數字
+            }
+        }
+
+        // 新資料推入視窗
+        sliding_window.push_back(data);
+
+        // 此時可以使用滑動視窗進行一些操作
+        window_sum += data; // 將新資料加到總和裡
+        println!("當前滑動視窗: {sliding_window:?}, 總和: {window_sum}");
+    }
+}
+// 當前滑動視窗: [1], 總和: 1
+// 當前滑動視窗: [1, 2], 總和: 3
+// 當前滑動視窗: [1, 2, 3], 總和: 6
+// 當前滑動視窗: [2, 3, 4], 總和: 9
+// 當前滑動視窗: [3, 4, 5], 總和: 12
 ```
 
 ## 雜湊表 (Hash Table)
@@ -370,6 +451,20 @@ impl<T> TreeNode<T> {
 ## 圖 (Graph)
 
 ## 排序 (Sorting)
+
+### 泡沫排序 (Bubble Sort)
+
+依次比較相鄰的兩個元素，並將較大的元素交換到後面。
+
+### 選擇排序 (Selection Sort)
+
+每次從未排序的部分中選出最小的元素，並將其放到已排序部分的最後。
+
+### 堆積排序 (Heap Sort)
+
+### 合併排序 (Merge Sort)
+
+基於分治 (Divide and Conquer) 策略。
 
 ## 搜尋 (Searching)
 

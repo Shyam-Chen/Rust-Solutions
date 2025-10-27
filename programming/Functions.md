@@ -210,6 +210,28 @@ fn main() {
 }
 ```
 
+指定特徵限制:
+
+```rs
+use std::ops::Add;
+
+fn add<T>(a: T, b: T) -> T
+where
+    T: Add<Output = T>,
+{
+    a + b
+}
+
+fn main() {
+    let int_val = add(1, 6);
+    let float_val = add(3.7, 2.1);
+    println!("int_val = {int_val}"); // int_val = 7
+    println!("float_val = {float_val}"); // float_val = 5.800000000000001
+}
+```
+
+結構的泛型:
+
 ```rs
 struct Point<T> {
     x: T,
@@ -226,6 +248,41 @@ fn main() {
     // Distance: 4.743416490252569
 }
 ```
+
+結構和實作的泛型:
+
+```rs
+struct Point<T> {
+    x: T,
+    y: T,
+}
+
+impl<T> Point<T> {
+    fn new(x: T, y: T) -> Self {
+        Self { x, y }
+    }
+
+    fn x(&self) -> &T {
+        &self.x
+    }
+
+    fn y(&self) -> &T {
+        &self.y
+    }
+}
+
+fn main() {
+    let int_point = Point::new(3, 4);
+    println!("{}, {}", int_point.x(), int_point.y());
+    // 3, 4
+
+    let float_point = Point::new(3.0, 4.0);
+    println!("{}, {}", float_point.x(), float_point.y());
+    // 3, 4
+}
+```
+
+指定多個特徵:
 
 ```rs
 use std::ops::Mul;
