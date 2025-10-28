@@ -33,10 +33,10 @@
   - [鏈結串列 (Linked List)](./algorithms/Beginning.md#鏈結串列-linked-list)
   - [堆疊 (Stack)](./algorithms/Beginning.md#堆疊-stack)
   - [佇列 (Queue)](./algorithms/Beginning.md#佇列-queue)
-  - 雜湊表 (Hash Table)
-  - 二元樹 (Binary Tree)
+  - [雜湊表 (Hash Table)](./algorithms/Beginning.md#雜湊表-hash-table)
+  - [二元樹 (Binary Tree)](./algorithms/Beginning.md#二元樹-binary-tree)
   - 二元搜尋樹 (Binary Search Tree)
-  - 平衡樹 (AVL / Red-Black Tree)
+  - [平衡樹 (Balanced Tree, AVL / Red-Black Tree)](./algorithms/Beginning.md#平衡樹-balanced-tree-avl--red-black-tree)
   - 堆積 (Heap)
   - 字典樹 (Trie)
   - 圖 (Graph)
@@ -57,14 +57,14 @@
 
 Clap
 
-- [應用程式 (Application)](./command-line/Application.md)
-- 表格 (Tables)
-- 進度條 (Progress Bars)
-- 顏色 (Colors)
-- 提示字元 (Prompts)
-- Excellent CLI tools
-  - `bat`
-  - `oha`
+- [應用程式 (Application)](./command-line/CommandLine.md#應用程式-application)
+- [子命令 (Subcommands)](./command-line/CommandLine.md#子命令-subcommands)
+- [表格 (Tables)](./command-line/CommandLine.md#表格-tables)
+- [進展 (Progresses)](./command-line/CommandLine.md#進展-progresses)
+- [顏色 (Colors)](./command-line/CommandLine.md#顏色-colors)
+- [提示字元 (Prompts)](./command-line/CommandLine.md#提示字元-prompts)
+- [非同步 (Asynchronous)](./command-line/CommandLine.md#非同步-asynchronous)
+- [開箱 (Unboxing Crates)](./command-line/CommandLine.md#開箱-unboxing-crates)
 
 ---
 
@@ -83,8 +83,7 @@ Leptos
   - Scoped
 - Router
 - State Management
-- `leptos::document();` / `web-sys`
-  - DOM
+- Web APIs + `leptos::document();` + `web-sys`
 - 製作 UI 元件
 - `leptos-use`
 - `charming` (ECharts)
@@ -95,12 +94,20 @@ Leptos
   - 容器化 + Caddy Server + Docker
   - 部署到 Render
 - 雲端平台部署
-  - 容器化全代管部署 + Google Cloud Run / Azure Container Apps
-  - Google Kubernetes Engine / Azure Kubernetes Service
+  - 容器化全代管部署
+    - Google Cloud Run
+    - Azure Container Apps
+    - AWS Fargate
+  - Kubernetes + Helm
+    - Google Kubernetes Engine
+    - Azure Kubernetes Service
+    - Amazon Elastic Kubernetes Service
 - 本地部署 (輕量化) + Kubernetes K3s
   - Raspberry Pi 5 Model B
 - `tauri`
+  - Pull to Refresh
   - Plugins
+    - Store
     - Notifications
   - Android + 發布至 Google Play (Closed Testing)
   - Windows + 發布至 Microsoft Store (Package Flights)
@@ -133,9 +140,16 @@ Axum
   - 部署到 Render + MongoDB Atlas + IDrive e2
   - 部署到 Redis Cloud + Render's Background Workers
   - 部署到 Qdrant Managed Cloud
+  - 申請設定 Gmail SMTP Server
 - 雲端平台部署
-  - 容器化全代管部署 + Google Cloud Run / Azure Container Apps
-  - Google Kubernetes Engine / Azure Kubernetes Service + Helm
+  - 容器化全代管部署
+    - Google Cloud Run
+    - Azure Container Apps
+    - AWS Fargate
+  - Kubernetes + Helm
+    - Google Kubernetes Engine
+    - Azure Kubernetes Service
+    - Amazon Elastic Kubernetes Service
 - 本地部署 (輕量化) + Kubernetes K3s
   - Raspberry Pi 5 Model B
 
@@ -156,3 +170,4 @@ Raspberry Pi
 - 感測器套件 (Yahboom Sensor Kit)
 - UART 串列通訊
 - MQTT 通訊協定 + `rumqttc`
+- NFC Module 讀寫卡模組 PN532

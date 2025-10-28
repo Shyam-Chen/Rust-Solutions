@@ -405,6 +405,29 @@ fn main() {
 
 ```rs
 use std::collections::HashMap;
+
+fn main() {
+    let mut scores = HashMap::new();
+
+    scores.insert("Alice", 60);
+    scores.insert("Bob", 70);
+    scores.insert("Carol", 90);
+
+    if let Some(score) = scores.get("Alice") {
+        println!("查詢 Alice 的分數: {score}");
+        // 查詢 Alice 的分數: 60
+    }
+
+    // 更新值
+    scores.insert("Alice", 65);
+
+    println!("分數表數量: {}", scores.len()); // 分數表數量: 3
+
+    // 列出 HashMap 中的所有鍵值組
+    for (key, value) in &scores {
+        println!("{key} 的分數: {value}");
+    }
+}
 ```
 
 ```rs
@@ -442,9 +465,55 @@ impl<T> TreeNode<T> {
 
 ## 二元搜尋樹 (Binary Search Tree)
 
-## 平衡樹 (AVL / Red-Black Tree)
+## 平衡樹 (Balanced Tree, AVL / Red-Black Tree)
+
+```rs
+use std::cell::RefCell;
+use std::rc::Rc;
+
+#[derive(Debug, PartialEq, Eq)]
+pub enum NodeColor {
+    Red,
+    Black,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+pub struct TreeNode<T: Ord> {
+    pub value: T,                                // 節點的值
+    pub height: u32,                             // 高度 (用於 AVL 樹的平衡計算)
+    pub color: Option<NodeColor>,                // 可選的顏色標記 (用於紅黑樹)
+    pub left: Option<Rc<RefCell<TreeNode<T>>>>,  // 左子樹
+    pub right: Option<Rc<RefCell<TreeNode<T>>>>, // 右子樹
+}
+
+// 實作 TreeNode 的範例初始化方法
+impl<T: Ord> TreeNode<T> {
+    pub fn new(value: T) -> Rc<RefCell<Self>> {
+        Rc::new(RefCell::new(TreeNode {
+            value,
+            height: 1, // 初始高度設定為 1
+            color: None,
+            left: None,
+            right: None,
+        }))
+    }
+}
+```
 
 ## 堆積 (Heap)
+
+### 大頂堆積 (Max Heap)
+
+```rs
+use std::collections::BinaryHeap;
+```
+
+### 小頂堆積 (Min Heap)
+
+```rs
+use std::cmp::Reverse;
+use std::collections::BinaryHeap;
+```
 
 ## 字典樹 (Trie)
 
