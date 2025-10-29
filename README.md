@@ -37,7 +37,7 @@
   - [二元樹 (Binary Tree)](./algorithms/Beginning.md#二元樹-binary-tree)
   - 二元搜尋樹 (Binary Search Tree)
   - [平衡樹 (Balanced Tree, AVL / Red-Black Tree)](./algorithms/Beginning.md#平衡樹-balanced-tree-avl--red-black-tree)
-  - 堆積 (Heap)
+  - [堆積 (Heap)](./algorithms/Beginning.md#堆積-heap)
   - 字典樹 (Trie)
   - 圖 (Graph)
   - 排序 (Sorting)
@@ -73,20 +73,23 @@ Clap
 Leptos
 
 - [應用程式 (Application)](./web/Application.md)
-- Components
+- 元件 (Components)
+  - 模板語法 (Template Syntax)
+  - Reactivity
+    - Signals / Computeds / Effects
+  - Class and Style
+    - Tailwind CSS
+    - Scoped CSS
   - Props / Event handler props
   - Children
-- Reactivity
-  - Signals / Computeds / Effects
-- CSS
-  - Tailwind CSS
-  - Scoped
 - Router
 - State Management
+- Data Fetching
 - Web APIs + `leptos::document();` + `web-sys`
 - 製作 UI 元件
 - `leptos-use`
 - `charming` (ECharts)
+- I18n
 - 伺服器端算繪 (Server-side Rendering)
   - `axum`
   - 後設資料 (Metadata)
@@ -128,13 +131,18 @@ Axum
 - `mongodb` + crud operations
 - `minio` + file uploads
 - `redis` + cache + MQ + worker
-- `candle-*` + Hugging Face + `qdrant-client` + Qdrant
-- Streams
+  - 排程清理檔案暫存區
+- Server-sent Events + Streams
 - WebSocket
 - 全端 (Full-stack)
   - `leptos`
+- `candle-*` + Hugging Face + `qdrant-client` + Qdrant
+  - stream + `leptos`
+  - Chat Memory
+  - Tool Calling Agents
 - 提供服務使用 GraphQL (`async-graphql`)
 - Email
+- I18n
 - 雲端服務部署
   - 容器化 + Docker
   - 部署到 Render + MongoDB Atlas + IDrive e2

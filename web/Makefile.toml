@@ -1,0 +1,7 @@
+[tasks.dev]
+command = "trunk"
+args = ["serve", "--port=8000"]
+
+[tasks.build]
+command = "trunk"
+args = ["build"]

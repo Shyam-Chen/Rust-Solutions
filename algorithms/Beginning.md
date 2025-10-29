@@ -1,4 +1,4 @@
-# Beginning - Algorithms
+# Beginning - Data Structures and Algorithms
 
 ## 陣列 (Array)
 
@@ -33,6 +33,42 @@ fn main() {
     let sentence = "The quick brown fox jumps over the lazy dog.";
     let chars: Vec<char> = sentence.chars().collect();
     println!("{}", chars[4]); // q
+}
+```
+
+```rs
+fn main() {
+    let rainbow = [
+        "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet",
+    ];
+
+    println!("{}", rainbow[0]); // Red
+    println!("{}", rainbow[3]); // Green
+    println!("{}", rainbow[4]); // Blue
+}
+```
+
+```rs
+fn main() {
+    let rainbow = vec![
+        "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet",
+    ];
+
+    println!("{}", rainbow[0]); // Red
+    println!("{}", rainbow[3]); // Green
+    println!("{}", rainbow[4]); // Blue
+}
+```
+
+```rs
+fn main() {
+    let rainbow = vec![
+        "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet",
+    ];
+
+    println!("{:?}", rainbow.get(0)); // Some("Red")
+    println!("{:?}", rainbow.get(3)); // Some("Green")
+    println!("{:?}", rainbow.get(4)); // Some("Blue")
 }
 ```
 
@@ -506,6 +542,58 @@ impl<T: Ord> TreeNode<T> {
 
 ```rs
 use std::collections::BinaryHeap;
+
+fn main() {
+    let mut max_heap = BinaryHeap::new();
+
+    // 元素入堆積
+    max_heap.extend(vec![1, 3, 6, 5, 9, 8, 15]);
+
+    // 取得堆積頂元素
+    if let Some(max_el) = max_heap.peek() {
+        println!("堆積頂元素: {max_el}"); // 15
+    }
+
+    // 頂元素出堆積
+    println!("{}", max_heap.pop().unwrap()); // 15
+    println!("{}", max_heap.pop().unwrap()); // 9
+    println!("{}", max_heap.pop().unwrap()); // 8
+
+    // 取得堆積長度
+    println!("堆積長度: {}", max_heap.len()); // 4
+
+    // 判斷堆積是否為空
+    println!("堆積是否為空: {}", max_heap.is_empty()); // false
+
+    // 清空堆積
+    max_heap.drain();
+    println!("堆積是否為空: {}", max_heap.is_empty()); // true
+}
+```
+
+插入元素:
+
+```rs
+let mut max_heap = BinaryHeap::new();
+max_heap.push(3);
+max_heap.push(5);
+max_heap.push(1);
+max_heap.push(8);
+```
+
+從陣列建立:
+
+```rs
+let data = vec![3, 5, 1, 8];
+let mut max_heap = BinaryHeap::from(data);
+```
+
+依序出堆積:
+
+```rs
+while let Some(max_el) = max_heap.pop() {
+    println!("{max_el}");
+}
 ```
 
 ### 小頂堆積 (Min Heap)
@@ -513,6 +601,17 @@ use std::collections::BinaryHeap;
 ```rs
 use std::cmp::Reverse;
 use std::collections::BinaryHeap;
+
+fn main() {
+    let mut min_heap = BinaryHeap::new();
+
+    let data = vec![1, 3, 6, 5, 9, 8, 15];
+    min_heap.extend(data.into_iter().map(Reverse));
+
+    while let Some(Reverse(min_el)) = min_heap.pop() {
+        println!("{min_el}");
+    }
+}
 ```
 
 ## 字典樹 (Trie)

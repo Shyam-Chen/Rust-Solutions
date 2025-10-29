@@ -27,7 +27,7 @@ fn main() {
 }
 ```
 
-## (非同步執行階段) Asynchronous Runtime
+## 非同步執行階段 (Asynchronous Runtime)
 
 ```sh
 $ cargo add tokio -F full
