@@ -1,5 +1,19 @@
 use leptos::prelude::*;
 
+#[component]
+pub fn App() -> impl IntoView {
+    view! {
+        <html>
+            <head>
+                <title>My Leptos App</title>
+            </head>
+            <body>
+                <p>"Hello, Leptos!"</p>
+            </body>
+        </html>
+    }
+}
+
 fn main() {
-    leptos::mount::mount_to_body(|| view! { <p>"Hello, world!"</p> })
+    mount_to_body(|| view! { <App/> });
 }

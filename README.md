@@ -85,11 +85,13 @@ Leptos
 - Router
 - State Management
 - Data Fetching
+- Form Validation
 - Web APIs + `leptos::document();` + `web-sys`
 - 製作 UI 元件
 - `leptos-use`
-- `charming` (ECharts)
-- I18n
+- 資料視覺化 (Data Visualization)
+  - `charming` (ECharts)
+- 多語言支援與國際化 (Internationalization)
 - 伺服器端算繪 (Server-side Rendering)
   - `axum`
   - 後設資料 (Metadata)
@@ -134,7 +136,7 @@ Axum
   - 排程清理檔案暫存區
 - Server-sent Events + Streams
 - WebSocket
-- 全端 (Full-stack)
+- 同構 (Isomorphic)
   - `leptos`
 - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
   - stream + `leptos`
@@ -142,7 +144,7 @@ Axum
   - Tool Calling Agents
 - 提供服務使用 GraphQL (`async-graphql`)
 - Email
-- I18n
+- 多語言支援與國際化 (Internationalization)
 - 雲端服務部署
   - 容器化 + Docker
   - 部署到 Render + MongoDB Atlas + IDrive e2

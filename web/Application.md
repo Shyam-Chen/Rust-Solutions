@@ -17,3 +17,7 @@ $ rustup target add wasm32-unknown-unknown
 ```sh
 $ cargo add leptos -F csr
 ```
+
+```sh
+$ cargo install static-web-server --locked
+```

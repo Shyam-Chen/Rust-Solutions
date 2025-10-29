@@ -4,4 +4,8 @@ args = ["serve", "--port=8000"]
 
 [tasks.build]
 command = "trunk"
-args = ["build"]
+args = ["build", "--release"]
+
+[tasks.preview]
+command = "static-web-server"
+args = ["--port=8080", "--root=./dist", "--page-fallback=index.html"]

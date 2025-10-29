@@ -2,3 +2,10 @@
 command = "cargo"
 args = ["run"]
 watch = true
+
+[tasks.build]
+command = "cargo"
+args = ["build", "--release"]
+
+[tasks.preview]
+command = "./target/release/${CARGO_MAKE_CRATE_NAME}"

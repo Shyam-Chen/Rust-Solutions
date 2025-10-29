@@ -13,5 +13,5 @@ async fn hello_world() -> Json<HelloWorld> {
 }
 
 pub fn router() -> Router {
-    Router::new().route("/hello-world", get(hello_world))
+    Router::new().route("/bar", get(hello_world))
 }
