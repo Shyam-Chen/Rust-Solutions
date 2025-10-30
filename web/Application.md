@@ -11,10 +11,6 @@ $ cargo install cargo-make --locked
 ```
 
 ```sh
-$ rustup target add wasm32-unknown-unknown
-```
-
-```sh
 $ cargo add leptos -F csr
 ```
 

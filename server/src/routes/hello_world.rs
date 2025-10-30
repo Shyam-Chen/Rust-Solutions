@@ -14,10 +14,10 @@ struct HelloPayload {
     name: String,
 }
 
-pub fn router() -> Router {
+fn handler() -> Router {
     Router::new()
         .route(
-            "/hello-world",
+            "/",
             get(|| async {
                 Json(HelloWorld {
                     message: "Hello, World!".into(),
@@ -25,11 +25,15 @@ pub fn router() -> Router {
             }),
         )
         .route(
-            "/hello-world",
+            "/",
             post(|Json(payload): Json<HelloPayload>| async move {
                 let name = payload.name;
                 let message = format!("Hello, {name}!");
                 Json(HelloWorld { message })
             }),
         )
+}
+
+pub fn router() -> Router {
+    Router::new().nest("/hello-world", handler())
 }

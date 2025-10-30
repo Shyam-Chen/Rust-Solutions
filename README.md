@@ -80,11 +80,13 @@ Leptos
   - Class and Style
     - Tailwind CSS
     - Scoped CSS
+    - Icon
   - Props / Event handler props
   - Children
 - Router
 - State Management
 - Data Fetching
+  - Streams API
 - Form Validation
 - Web APIs + `leptos::document();` + `web-sys`
 - 製作 UI 元件
@@ -138,10 +140,12 @@ Axum
 - WebSocket
 - 同構 (Isomorphic)
   - `leptos`
-- `candle-*` + Hugging Face + `qdrant-client` + Qdrant
-  - stream + `leptos`
-  - Chat Memory
-  - Tool Calling Agents
+- 人工智慧代理 (AI Agents)
+  - Gemini (DeepMind) / ChatGPT (OpenAI) / Claude (Anthropic) + Qdrant
+    - `swiftide-*` + stream + `leptos`
+    - Chat Memory
+    - Tool Calling Agents
+  - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
 - 提供服務使用 GraphQL (`async-graphql`)
 - Email
 - 多語言支援與國際化 (Internationalization)
@@ -156,6 +160,10 @@ Axum
     - Google Cloud Run
     - Azure Container Apps
     - AWS Fargate
+  - 人工智慧代理遷移進平台
+    - Gemini (DeepMind) on Google Cloud
+    - ChatGPT (OpenAI) on Microsoft Azure
+    - Claude (Anthropic) on AWS
   - Kubernetes + Helm
     - Google Kubernetes Engine
     - Azure Kubernetes Service
