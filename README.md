@@ -111,7 +111,7 @@ Leptos
     - Amazon Elastic Kubernetes Service
 - 本地部署 (輕量化) + Kubernetes K3s
   - Raspberry Pi 5 Model B
-- `tauri`
+- 跨平台原生應用 `tauri`
   - Pull to Refresh
   - Plugins
     - Store
@@ -128,16 +128,14 @@ Leptos
 Axum
 
 - [應用程式 (Application)](./server/Application.md)
-- Router
-- Middleware
-- JWT (`jsonwebtoken`) + auth
-  - 密碼雜湊 (hashing) + `argon2`
-- `mongodb` + crud operations
-- `minio` + file uploads
-- `redis` + cache + MQ + worker
-  - 排程清理檔案暫存區
-- Server-sent Events + Streams
-- WebSocket
+- [路由 (Routing)](./server/Routing.md)
+- [中介軟體 (Middleware)](./server/Middleware.md)
+- [身分驗證 (Authentication)](./server/Authentication.md)
+- [MongoDB 文件資料庫 (MongoDB Document Database)](./server/MongoDB.md)
+- [MinIO S3 物件儲存 (MinIO S3 Object Storage)](./server/MinIO.md)
+- [Redis 鍵值對資料庫 (Redis Key-Value Database)](./server/Redis.md)
+- [資料流 (Streaming)](./server/Streaming.md)
+- [WebSocket 雙向通訊 (WebSocket Full-duplex Interaction)](./server/WebSocket.md)
 - 同構 (Isomorphic)
   - `leptos`
 - 人工智慧代理 (AI Agents)
@@ -148,6 +146,7 @@ Axum
   - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
 - 提供服務使用 GraphQL (`async-graphql`)
 - Email
+  - MJML
 - 多語言支援與國際化 (Internationalization)
 - 雲端服務部署
   - 容器化 + Docker

@@ -88,16 +88,3 @@ struct HelloWorld {
     message: String,
 }
 ```
-
----
-
-發送開通初始密碼:
-
-```rs
-use rand::distr::{Alphanumeric, SampleString};
-
-fn main() {
-    let string = Alphanumeric.sample_string(&mut rand::rng(), 16);
-    println!("Random string: {string}");
-}
-```
