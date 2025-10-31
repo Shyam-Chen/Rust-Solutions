@@ -104,22 +104,24 @@ Problems:
 | 86. Partition List                        | Solution | Medium | 詳解 |
 | 146. LRU Cache                            | Solution | Medium | 詳解 |
 
-| Binary Tree General                                             |          |        |      |
-| --------------------------------------------------------------- | -------- | ------ | ---- |
-| 104. Maximum Depth of Binary Tree                               | Solution | Easy   | 詳解 |
-| 100. Same Tree                                                  | Solution | Easy   | 詳解 |
-| 226. Invert Binary Tree                                         | Solution | Easy   | 詳解 |
-| 101. Symmetric Tree                                             | Solution | Easy   | 詳解 |
-| 105. Construct Binary Tree from Preorder and Inorder Traversal  | Solution | Medium | 詳解 |
-| 106. Construct Binary Tree from Inorder and Postorder Traversal | Solution | Medium | 詳解 |
-| 117. Populating Next Right Pointers in Each Node II             | Solution | Medium | 詳解 |
-| 114. Flatten Binary Tree to Linked List                         | Solution | Medium | 詳解 |
-| 112. Path Sum                                                   | Solution | Easy   | 詳解 |
-| 129. Sum Root to Leaf Numbers                                   | Solution | Medium | 詳解 |
-| 124. Binary Tree Maximum Path Sum                               | Solution | Hard   | 詳解 |
-| 173. Binary Search Tree Iterator                                | Solution | Medium | 詳解 |
-| 222. Count Complete Tree Nodes                                  | Solution | Easy   | 詳解 |
-| 236. Lowest Common Ancestor of a Binary Tree                    | Solution | Medium | 詳解 |
+| Binary Tree General                                             |                 |        |      |
+| --------------------------------------------------------------- | --------------- | ------ | ---- |
+| 104. Maximum Depth of Binary Tree                               | Solution        | Easy   | 詳解 |
+| 100. Same Tree                                                  | [Solution][100] | Easy   | 詳解 |
+| 226. Invert Binary Tree                                         | Solution        | Easy   | 詳解 |
+| 101. Symmetric Tree                                             | Solution        | Easy   | 詳解 |
+| 105. Construct Binary Tree from Preorder and Inorder Traversal  | Solution        | Medium | 詳解 |
+| 106. Construct Binary Tree from Inorder and Postorder Traversal | Solution        | Medium | 詳解 |
+| 117. Populating Next Right Pointers in Each Node II             | Solution        | Medium | 詳解 |
+| 114. Flatten Binary Tree to Linked List                         | Solution        | Medium | 詳解 |
+| 112. Path Sum                                                   | Solution        | Easy   | 詳解 |
+| 129. Sum Root to Leaf Numbers                                   | Solution        | Medium | 詳解 |
+| 124. Binary Tree Maximum Path Sum                               | Solution        | Hard   | 詳解 |
+| 173. Binary Search Tree Iterator                                | Solution        | Medium | 詳解 |
+| 222. Count Complete Tree Nodes                                  | Solution        | Easy   | 詳解 |
+| 236. Lowest Common Ancestor of a Binary Tree                    | Solution        | Medium | 詳解 |
+
+[100]: ./src/solutions/_100_is_same_tree.rs
 
 | Binary Tree BFS                               |          |        |      |
 | --------------------------------------------- | -------- | ------ | ---- |

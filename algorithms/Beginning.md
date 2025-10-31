@@ -499,7 +499,175 @@ impl<T> TreeNode<T> {
 }
 ```
 
+```rs
+fn main() {
+    let level1_root = Rc::new(RefCell::new(TreeNode::new(1)));
+    let level2_left = Rc::new(RefCell::new(TreeNode::new(2)));
+    let level2_right = Rc::new(RefCell::new(TreeNode::new(3)));
+    let level3_left_left = Rc::new(RefCell::new(TreeNode::new(4)));
+    let level3_left_right = Rc::new(RefCell::new(TreeNode::new(5)));
+
+    level1_root.borrow_mut().left = Some(Rc::clone(&level2_left));
+    level1_root.borrow_mut().right = Some(Rc::clone(&level2_right));
+    level2_left.borrow_mut().left = Some(Rc::clone(&level3_left_left));
+    level2_left.borrow_mut().right = Some(Rc::clone(&level3_left_right));
+
+    println!("{level1_root:#?}");
+}
+//     1
+//    / \
+//   2   3
+//  / \
+// 4   5
+```
+
+```rs
+impl<T> TreeNode<T> {
+    #[inline]
+    pub fn new(value: T) -> Rc<RefCell<Self>> {
+        Rc::new(RefCell::new(TreeNode {
+            value,
+            left: None,
+            right: None,
+        }))
+    }
+}
+```
+
+```rs
+fn main() {
+    let level1_root = TreeNode::new(1);
+    let level2_left = TreeNode::new(2);
+    let level2_right = TreeNode::new(3);
+    let level3_left_left = TreeNode::new(4);
+    let level3_left_right = TreeNode::new(5);
+
+    level1_root.borrow_mut().left = Some(level2_left.clone());
+    level1_root.borrow_mut().right = Some(level2_right.clone());
+    level2_left.borrow_mut().left = Some(level3_left_left.clone());
+    level2_left.borrow_mut().right = Some(level3_left_right.clone());
+
+    println!("{level1_root:#?}");
+}
+//     1
+//    / \
+//   2   3
+//  / \
+// 4   5
+```
+
+走訪節點 (層序走訪 (Level-order Traversal), 廣度優先搜尋 (Breadth-First Search, BFS)):
+
+```rs
+
+```
+
+### 前序走訪
+
+以遞迴方式依序走訪「根節點 -> 左子樹 -> 右子樹」。
+
+```rs
+
+```
+
+比對兩棵樹是否為相同:
+
+```rs
+use std::cell::RefCell;
+use std::rc::Rc;
+
+#[derive(Debug, PartialEq, Eq)]
+pub struct TreeNode<T> {
+    pub value: T,
+    pub left: Option<Rc<RefCell<TreeNode<T>>>>,
+    pub right: Option<Rc<RefCell<TreeNode<T>>>>,
+}
+
+impl<T> TreeNode<T> {
+    #[inline]
+    pub fn new(value: T) -> Rc<RefCell<Self>> {
+        Rc::new(RefCell::new(TreeNode {
+            value,
+            left: None,
+            right: None,
+        }))
+    }
+}
+
+pub fn is_same_tree<T: PartialEq>(
+    p: Option<Rc<RefCell<TreeNode<T>>>>,
+    q: Option<Rc<RefCell<TreeNode<T>>>>,
+) -> bool {
+    match (p, q) {
+        (None, None) => true, // 如果兩棵樹都是空的，它們相等
+        (Some(p_node), Some(q_node)) => {
+            // 如果當前節點的值相等，遞迴比對左子樹和右子樹
+            p_node.borrow().value == q_node.borrow().value
+                && is_same_tree(p_node.borrow().left.clone(), q_node.borrow().left.clone())
+                && is_same_tree(p_node.borrow().right.clone(), q_node.borrow().right.clone())
+        }
+        _ => false, // 其他情況 (如一者為 None，另一者不是)，它們不相等
+    }
+}
+
+fn main() {
+    let tree1_level1_root = TreeNode::new(1);
+    let tree1_level2_left = TreeNode::new(2);
+    let tree1_level2_right = TreeNode::new(3);
+    tree1_level1_root.borrow_mut().left = Some(tree1_level2_left);
+    tree1_level1_root.borrow_mut().right = Some(tree1_level2_right);
+
+    let tree2_level1_root = TreeNode::new(1);
+    let tree2_level2_left = TreeNode::new(2);
+    let tree2_level2_right = TreeNode::new(3);
+    tree2_level1_root.borrow_mut().left = Some(tree2_level2_left);
+    tree2_level1_root.borrow_mut().right = Some(tree2_level2_right);
+
+    let tree1 = Some(tree1_level1_root.clone());
+    let tree2 = Some(tree2_level1_root.clone());
+    println!("{}", is_same_tree(tree1, tree2));
+    // true
+
+    let tree2_level2_right = TreeNode::new(4);
+    tree2_level1_root.borrow_mut().right = Some(tree2_level2_right);
+    let tree1 = Some(tree1_level1_root.clone());
+    let tree2 = Some(tree2_level1_root.clone());
+    println!("{}", is_same_tree(tree1, tree2));
+    // false
+}
+```
+
+### 中序走訪
+
+```rs
+
+```
+
+### 後序走訪
+
+```rs
+
+```
+
 ## 二元搜尋樹 (Binary Search Tree)
+
+搜尋節點:
+
+```rs
+
+```
+
+插入節點:
+
+```rs
+
+```
+
+刪除節點:
+
+```rs
+
+```
 
 ## 平衡樹 (Balanced Tree, AVL / Red-Black Tree)
 

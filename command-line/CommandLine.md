@@ -56,6 +56,29 @@ $ cargo run -- -V
 my-cli-app 0.1.0
 ```
 
+編譯成可執行檔:
+
+```sh
+$ cargo build --release
+```
+
+將執行檔安裝到本地:
+
+```sh
+$ cp ./target/release/my-cli $HOME/.cargo/bin/
+```
+
+```sh
+$ my-cli
+Hello, World!
+
+$ my-cli --name Alice
+Hello, Alice!
+
+$ my-cli -n Bob
+Hello, Bob!
+```
+
 ## 子命令 (Subcommands)
 
 ```rs
