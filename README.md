@@ -35,12 +35,12 @@
   - [佇列 (Queue)](./algorithms/Beginning.md#佇列-queue)
   - [雜湊表 (Hash Table)](./algorithms/Beginning.md#雜湊表-hash-table)
   - [二元樹 (Binary Tree)](./algorithms/Beginning.md#二元樹-binary-tree)
-  - 二元搜尋樹 (Binary Search Tree)
+  - [二元搜尋樹 (Binary Search Tree)](./algorithms/Beginning.md#二元搜尋樹-binary-search-tree)
   - [平衡樹 (Balanced Tree, AVL / Red-Black Tree)](./algorithms/Beginning.md#平衡樹-balanced-tree-avl--red-black-tree)
   - [堆積 (Heap)](./algorithms/Beginning.md#堆積-heap)
   - 字典樹 (Trie)
   - 圖 (Graph)
-  - 排序 (Sorting)
+  - [排序 (Sorting)](./algorithms/Beginning.md#排序-sorting)
   - 搜尋 (Searching)
   - 分治 (Divide and Conquer)
   - 回溯 (Backtracking)
@@ -176,7 +176,8 @@ Axum
 
 Raspberry Pi
 
-- `gpio-cdev` + 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
+- 單板電腦 (Raspberry Pi 5) + `gpio-cdev`
+- 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
 - 8x8 LED 點矩陣 (8x8 LED Matrix)
 - 光敏電阻 / 蜂鳴器 / 紅外線偵測 / 馬達
 - 機械手臂 (Robot Arm Kit for Raspberry Pi)
@@ -188,3 +189,7 @@ Raspberry Pi
 - UART 串列通訊
 - MQTT 通訊協定 + `rumqttc`
 - NFC Module 讀寫卡模組 PN532
+- Jetson
+  - Jetson Orin Nano
+- STM32
+  - STM32F407

@@ -788,9 +788,50 @@ fn main() {
 
 ## 排序 (Sorting)
 
-### 泡沫排序 (Bubble Sort)
+### 冒泡排序 (Bubble Sort)
 
-依次比較相鄰的兩個元素，並將較大的元素交換到後面。
+反覆對相鄰元素進行比較與交換，讓最大的元素每一趟都往序列的一端「冒泡」。
+
+1. 從左到右，比較 `arr[j]` 與 `arr[j+1]`
+2. 若前者大於後者則交換
+3. 完成一趟後，最大值位於末端；下一趟可少比較一個末端位置 (最大泡泡浮出水面)
+4. 若某一趟中沒有任何交換，序列已排序，可提早結束
+
+```rs
+pub fn bubble_sort<T: Ord>(arr: &mut [T]) {
+    let n = arr.len();
+
+    if n <= 1 {
+        return;
+    }
+
+    for i in 0..n {
+        let mut swapped = false;
+
+        // 每一趟把最大值冒到末端，末端區域不再比較
+        for j in 0..(n - 1 - i) {
+            if arr[j] > arr[j + 1] {
+                arr.swap(j, j + 1);
+                swapped = true;
+            }
+        }
+
+        // 若本趟未發生交換，提早結束
+        if !swapped {
+            break;
+        }
+    }
+}
+```
+
+```rs
+fn main() {
+    let mut arr = vec![5, 3, 8, 4, 2];
+    bubble_sort(&mut arr);
+    println!("{arr:?}");
+    // [2, 3, 4, 5, 8]
+}
+```
 
 ### 選擇排序 (Selection Sort)
 
