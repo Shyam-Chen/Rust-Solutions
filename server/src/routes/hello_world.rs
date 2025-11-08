@@ -15,23 +15,26 @@ struct HelloPayload {
 }
 
 fn handler() -> Router {
-    Router::new()
-        .route(
-            "/",
-            get(|| async {
-                Json(HelloWorld {
-                    message: "Hello, World!".into(),
-                })
-            }),
-        )
-        .route(
-            "/",
-            post(|Json(payload): Json<HelloPayload>| async move {
-                let name = payload.name;
-                let message = format!("Hello, {name}!");
-                Json(HelloWorld { message })
-            }),
-        )
+    let mut router = Router::new();
+
+    router = router.route(
+        "/",
+        get(|| async {
+            Json(HelloWorld {
+                message: "Hello, World!".into(),
+            })
+        }),
+    );
+
+    router = router.route(
+        "/",
+        post(|Json(payload): Json<HelloPayload>| async move {
+            let message = format!("Hello, {}!", payload.name);
+            Json(HelloWorld { message })
+        }),
+    );
+
+    router
 }
 
 pub fn router() -> Router {

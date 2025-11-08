@@ -176,7 +176,7 @@ Axum
 
 Raspberry Pi
 
-- 單板電腦 (Raspberry Pi 5) + `gpio-cdev`
+- 單板電腦 (Raspberry Pi 5) + `gpio-cdev` + Blinky LED
 - 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
 - 8x8 LED 點矩陣 (8x8 LED Matrix)
 - 光敏電阻 / 蜂鳴器 / 紅外線偵測 / 馬達
@@ -191,5 +191,5 @@ Raspberry Pi
 - NFC Module 讀寫卡模組 PN532
 - Jetson
   - Jetson Orin Nano
-- STM32
+- STM32 + `embassy-stm32`
   - STM32F407

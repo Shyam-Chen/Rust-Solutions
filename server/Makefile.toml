@@ -1,7 +1,6 @@
 [tasks.dev]
-command = "cargo"
-args = ["run"]
-watch = true
+command = "watchexec"
+args = ["-r", "-w=src", "cargo", "run"]
 
 [tasks.build]
 command = "cargo"

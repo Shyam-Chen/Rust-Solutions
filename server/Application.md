@@ -41,14 +41,17 @@ Hello, World!
 $ cargo install cargo-make --locked
 ```
 
+```sh
+$ cargo install watchexec-cli --locked
+```
+
 建立 `Makefile.toml`:
 
 ```toml
 # Makefile.toml
 [tasks.dev]
-command = "cargo"
-args = ["run"]
-watch = true
+command = "watchexec"
+args = ["-r", "-w=src", "cargo", "run"]
 ```
 
 專案下執行:
