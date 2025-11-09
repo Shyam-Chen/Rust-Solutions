@@ -1,0 +1,79 @@
+use std::collections::HashMap;
+
+#[derive(Default)]
+struct TrieNode {
+    children: HashMap<char, TrieNode>,
+    is_end_of_word: bool,
+}
+
+impl TrieNode {
+    fn new() -> Self {
+        Default::default()
+    }
+}
+
+struct Trie {
+    root: TrieNode,
+}
+
+impl Trie {
+    fn new() -> Self {
+        Trie {
+            root: TrieNode::new(),
+        }
+    }
+
+    fn insert(&mut self, word: String) {
+        let mut node = &mut self.root;
+
+        for char in word.chars() {
+            node = node.children.entry(char).or_insert(TrieNode::new());
+        }
+
+        node.is_end_of_word = true;
+    }
+
+    fn search(&self, word: String) -> bool {
+        let mut node = &self.root;
+
+        for char in word.chars() {
+            match node.children.get(&char) {
+                Some(next) => node = next,
+                None => return false,
+            }
+        }
+
+        node.is_end_of_word
+    }
+
+    fn starts_with(&self, prefix: String) -> bool {
+        let mut node = &self.root;
+
+        for char in prefix.chars() {
+            match node.children.get(&char) {
+                Some(next) => node = next,
+                None => return false,
+            }
+        }
+
+        true
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn trie() {
+        let mut trie = Trie::new();
+
+        trie.insert("apple".into());
+        assert_eq!(trie.search("apple".into()), true);
+        assert_eq!(trie.search("app".into()), false);
+        assert_eq!(trie.starts_with("app".into()), true);
+
+        trie.insert("app".into());
+        assert_eq!(trie.search("app".into()), true);
+    }
+}

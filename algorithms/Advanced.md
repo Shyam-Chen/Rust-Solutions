@@ -151,11 +151,13 @@ Problems:
 | 433. Minimum Genetic Mutation | Solution | Medium | 詳解 |
 | 127. Word Ladder              | Solution | Hard   | 詳解 |
 
-| Trie                                            |          |        |      |
-| ----------------------------------------------- | -------- | ------ | ---- |
-| 208. Implement Trie (Prefix Tree)               | Solution | Medium | 詳解 |
-| 211. Design Add and Search Words Data Structure | Solution | Medium | 詳解 |
-| 212. Word Search II                             | Solution | Hard   | 詳解 |
+| Trie                                            |                 |        |      |
+| ----------------------------------------------- | --------------- | ------ | ---- |
+| 208. Implement Trie (Prefix Tree)               | [Solution][208] | Medium | 詳解 |
+| 211. Design Add and Search Words Data Structure | Solution        | Medium | 詳解 |
+| 212. Word Search II                             | Solution        | Hard   | 詳解 |
+
+[208]: ./src/solutions/_208_trie.rs
 
 | Backtracking                              |          |        |      |
 | ----------------------------------------- | -------- | ------ | ---- |

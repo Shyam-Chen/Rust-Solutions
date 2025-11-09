@@ -136,9 +136,11 @@ Problems:
 | 15. 3Sum                      | Solution | Medium | 詳解 |
 | 42. Trapping Rain Water       | Solution | Easy   | 詳解 |
 
-| Trie                              |          |        |      |
-| --------------------------------- | -------- | ------ | ---- |
-| 208. Implement Trie (Prefix Tree) | Solution | Medium | 詳解 |
+| Trie                              |                 |        |      |
+| --------------------------------- | --------------- | ------ | ---- |
+| 208. Implement Trie (Prefix Tree) | [Solution][208] | Medium | 詳解 |
+
+[208]: ./src/solutions/_208_trie.rs
 
 | Misc                              |          |        |      |
 | --------------------------------- | -------- | ------ | ---- |

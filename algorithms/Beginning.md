@@ -784,7 +784,197 @@ fn main() {
 
 ## 字典樹 (Trie)
 
+`children`，例如插入 "apple":
+
+```
+a → p → p → l → e
+```
+
+`is_end_of_word`，例如插入 "app" 和 "apple":
+
+```
+a - p - p (is_end_of_word = true)
+         \
+          l - e (is_end_of_word = true)
+```
+
+```rs
+use std::collections::HashMap;
+
+#[derive(Default)]
+struct TrieNode {
+    children: HashMap<char, TrieNode>,
+    is_end_of_word: bool,
+}
+
+impl TrieNode {
+    fn new() -> Self {
+        Default::default()
+    }
+}
+
+struct Trie {
+    root: TrieNode,
+}
+
+impl Trie {
+    fn new() -> Self {
+        Trie {
+            root: TrieNode::new(),
+        }
+    }
+
+    fn insert(&mut self, word: String) {
+        let mut node = &mut self.root;
+
+        for char in word.chars() {
+            node = node.children.entry(char).or_insert(TrieNode::new());
+        }
+
+        node.is_end_of_word = true;
+    }
+
+    fn search(&self, word: String) -> bool {
+        let mut node = &self.root;
+
+        for char in word.chars() {
+            match node.children.get(&char) {
+                Some(next) => node = next,
+                None => return false,
+            }
+        }
+
+        node.is_end_of_word
+    }
+
+    fn starts_with(&self, prefix: String) -> bool {
+        let mut node = &self.root;
+
+        for char in prefix.chars() {
+            match node.children.get(&char) {
+                Some(next) => node = next,
+                None => return false,
+            }
+        }
+
+        true
+    }
+}
+```
+
+```rs
+fn main() {
+    let mut trie = Trie::new();
+
+    trie.insert("apple".into());
+    println!("{}", trie.search("apple".into())); // true
+    println!("{}", trie.search("app".into())); // false
+    println!("{}", trie.starts_with("app".into())); // true
+
+    trie.insert("app".into());
+    println!("{}", trie.search("app".into())); // true
+}
+```
+
 ## 圖 (Graph)
+
+鄰接表 (Adjacency List) 的雜湊表方式:
+
+由頂點 (Vertex) -> 邊 (Edge) 組成:
+
+```
+A → B, C
+B → A, D, E
+C → A, D
+D → B, C, E
+E → B, D
+```
+
+```mermaid
+flowchart LR
+    A((A))
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+
+    A o--o B
+    A o--o C
+    B o--o D
+    B o--o E
+    C o--o D
+    D o--o E
+```
+
+```rs
+use std::collections::HashMap;
+
+#[derive(Debug)]
+struct Graph {
+    adj: HashMap<String, Vec<String>>,
+}
+
+impl Graph {
+    fn new() -> Self {
+        Self {
+            adj: HashMap::new(),
+        }
+    }
+
+    fn add_vertex(&mut self, val: &str) {
+        self.adj.entry(val.to_string()).or_insert(vec![]);
+    }
+
+    fn add_edge(&mut self, from: &str, to: &str) {
+        self.adj
+            .entry(from.to_string())
+            .or_insert(vec![])
+            .push(to.to_string());
+    }
+
+    fn neighbors(&self, val: &str) -> Option<&Vec<String>> {
+        self.adj.get(val)
+    }
+}
+
+fn main() {
+    let mut g = Graph::new();
+
+    // 加入頂點
+    for v in ["A", "B", "C", "D", "E"] {
+        g.add_vertex(v);
+    }
+
+    // 加入邊
+    g.add_edge("A", "B");
+    g.add_edge("A", "C");
+
+    g.add_edge("B", "A");
+    g.add_edge("B", "D");
+    g.add_edge("B", "E");
+
+    g.add_edge("C", "A");
+    g.add_edge("C", "D");
+
+    g.add_edge("D", "B");
+    g.add_edge("D", "C");
+    g.add_edge("D", "E");
+
+    g.add_edge("E", "B");
+    g.add_edge("E", "D");
+
+    println!("A: {:?}", g.neighbors("A").unwrap());
+    println!("B: {:?}", g.neighbors("B").unwrap());
+    println!("C: {:?}", g.neighbors("C").unwrap());
+    println!("D: {:?}", g.neighbors("D").unwrap());
+    println!("E: {:?}", g.neighbors("E").unwrap());
+}
+// A: ["B", "C"]
+// B: ["A", "D", "E"]
+// C: ["A", "D"]
+// D: ["B", "C", "E"]
+// E: ["B", "D"]
+```
 
 ## 排序 (Sorting)
 
