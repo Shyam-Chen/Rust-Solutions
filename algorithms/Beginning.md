@@ -1035,9 +1035,107 @@ fn main() {
 
 ## 搜尋 (Searching)
 
+### 雙閉區間 `[left, right]` 的二分搜尋 (Binary Search)
+
+```rs
+fn binary_search(arr: &Vec<i32>, target: i32) -> Option<usize> {
+    let mut left = 0;
+    let mut right = arr.len().saturating_sub(1); // 雙閉區間，右邊界包含最後一個元素
+
+    while left <= right {
+        let mid = left + (right - left) / 2; // 避免溢位
+        if arr[mid] == target {
+            return Some(mid);
+        } else if arr[mid] < target {
+            left = mid + 1; // 搜尋右半邊
+        } else {
+            right = mid.saturating_sub(1); // 搜尋左半邊
+        }
+    }
+
+    None // 找不到
+}
+
+fn main() {
+    let arr = vec![1, 3, 5, 7, 9];
+    let target = 7;
+
+    if let Some(index) = binary_search(&arr, target) {
+        println!("找到 {target}，位置在 {index}");
+    } else {
+        println!("{target} 不存在於陣列中");
+    }
+}
+// 找到 7，位置在 3
+```
+
 ## 分治 (Divide and Conquer)
 
+分治法策略:
+
+1. 分解 (Divide): 把問題拆成較小的子問題
+2. 解決 (Conquer): 遞迴地解決這些子問題
+3. 合併 (Combine): 把子問題的結果合併，得到最終答案
+
+例子:
+
+- 合併排序 (Merge Sort)
+- 快速排序 (Quick Sort)
+- 二分搜尋 (Binary Search)
+- 矩陣乘法（Strassen 演算法）
+
 ## 回溯 (Backtracking)
+
+回溯法策略:
+
+1. 狀態 (State): 目前的解或部分解
+2. 嘗試 (Try / Choice): 針對下一步的可行選擇
+3. 回退 (Backtrack): 嘗試之後，還原狀態，以便探索其他選擇
+4. 紀錄解 (Record / Solution): 當達到目標條件時，保存結果
+5. 剪枝 (Pruning): 提前排除不可能的路徑，提高效率
+
+```rs
+fn main() {
+    let permutation_length = 3; // 每個排列要有幾個元素
+    let max_number = 3; // 可選數字的最大值
+
+    let mut current = Vec::new();
+    let mut solutions = Vec::new();
+
+    fn backtrack(
+        current: &mut Vec<u32>,
+        solutions: &mut Vec<Vec<u32>>,
+        permutation_length: usize,
+        max_number: u32,
+    ) {
+        // 達到目標長度，紀錄解
+        if current.len() == permutation_length {
+            solutions.push(current.clone());
+            return;
+        }
+
+        // 嘗試每一個可能選擇
+        for i in 1..=max_number {
+            // 如果已經在 current 中，跳過 (剪枝)
+            if current.contains(&i) {
+                continue;
+            }
+
+            // 嘗試
+            current.push(i);
+            backtrack(current, solutions, permutation_length, max_number);
+
+            // 回退
+            current.pop();
+        }
+    }
+
+    backtrack(&mut current, &mut solutions, permutation_length, max_number);
+
+    println!("所有解: {solutions:?}");
+    // 所有解: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+}
+```
 
 ## 動態規劃 (Dynamic Programming)
 
