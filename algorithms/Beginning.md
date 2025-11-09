@@ -1139,6 +1139,62 @@ fn main() {
 
 ## 動態規劃 (Dynamic Programming)
 
+費波那契數:
+
+```rs
+fn fibonacci(n: usize) -> u64 {
+    let mut dp = vec![0_u64, 1];
+
+    for i in 2..=n {
+        dp.push(dp[i - 1] + dp[i - 2]);
+    }
+
+    dp[n]
+}
+
+fn main() {
+    println!("{}", fibonacci(10)); // 55
+}
+```
+
 ## 貪婪 (Greedy)
 
+在問題的每個決策階段 都選擇當前看起來最優的選擇，以期望能得到全域的最優解。
+
+### 分數背包問題 (Fractional Knapsack Problem)
+
+給定一個背包，背包的容量是有限的，你可以選擇將物品裝入背包。每個物品有一個重量和價值，但你可以選擇將物品切割，部分裝入背包。目標是最大化裝入背包中的物品的總價值。
+
+物品:
+
+```rs
+let items = vec![
+    Item { weight: 1.0, value: 5.0 },
+    Item { weight: 2.0, value: 11.0 },
+    Item { weight: 3.0, value: 15.0 },
+];
+```
+
 ## 位元操作 (Bit Manipulation)
+
+| 運算       | 說明                    | Rust     |
+| ---------- | ----------------------- | -------- |
+| AND 及     | 兩者都為 1 才為 1       | `a & b`  |
+| OR 或      | 兩者只要一個為 1 就為 1 | `a \| b` |
+| XOR 互斥或 | 不同為 1，相同為 0      | `a ^ b`  |
+| NOT 反相   | 反轉位元                | `!a`     |
+| 左移       | 相當於 ×2               | `a << n` |
+| 右移       | 相當於 ÷2               | `a >> n` |
+
+```rs
+fn main() {
+    let a = 5;  // 0101
+    let b = 3;  // 0011
+
+    println!("{}", a & b); // 1 (0001)
+    println!("{}", a | b); // 7 (0111)
+    println!("{}", a ^ b); // 6 (0110)
+    println!("{}", a << 1); // 10
+    println!("{}", a >> 1); // 2
+}
+```

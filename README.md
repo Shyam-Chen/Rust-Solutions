@@ -44,9 +44,9 @@
   - [搜尋 (Searching)](./algorithms/Beginning.md#搜尋-searching)
   - [分治 (Divide and Conquer)](./algorithms/Beginning.md#分治-divide-and-conquer)
   - [回溯 (Backtracking)](./algorithms/Beginning.md#回溯-backtracking)
-  - 動態規劃 (Dynamic Programming)
-  - 貪婪 (Greedy)
-  - 位元操作 (Bit Manipulation)
+  - [動態規劃 (Dynamic Programming)](./algorithms/Beginning.md#動態規劃-dynamic-programming)
+  - [貪婪 (Greedy)](./algorithms/Beginning.md#貪婪-greedy)
+  - [位元操作 (Bit Manipulation)](./algorithms/Beginning.md#位元操作-bit-manipulation)
 - [Basic - LeetCode 75](./algorithms/Basic.md)
 - [Advanced - Top Interview 150](./algorithms/Advanced.md)
 - [Impactful - Top 100 Liked](./algorithms/Impactful.md)
@@ -83,8 +83,8 @@ Leptos
     - Icon
   - Props / Event handler props
   - Children
-- Router
-- State Management
+- 路由器 (Router)
+- 狀態管理 (State Management)
 - Data Fetching
   - Streams API
 - Form Validation
@@ -116,6 +116,9 @@ Leptos
   - Plugins
     - Store
     - Notifications
+    - Deep Linking
+    - NFC
+    - Barcode Scanner
   - Android + 發布至 Google Play (Closed Testing)
   - Windows + 發布至 Microsoft Store (Package Flights)
   - iOS + 發布至 App Store (Apple TestFlight)
@@ -176,7 +179,7 @@ Axum
 
 Raspberry Pi
 
-- 單板電腦 (Raspberry Pi 5) + `gpio-cdev` + Blinky LED
+- 單板電腦 (Raspberry Pi 5 Model B) + `gpio-cdev` + Blinky LED
 - 麵包版 (Breadboard) + 電阻 (Resistor) + 發光二極體 (LED) + 按鈕 (Button)
 - 8x8 LED 點矩陣 (8x8 LED Matrix)
 - 光敏電阻 / 蜂鳴器 / 紅外線偵測 / 馬達

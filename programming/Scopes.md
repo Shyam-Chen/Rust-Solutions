@@ -66,7 +66,7 @@ fn main() {
 // value 還可以被訪問: Some("Hello, World!")
 ```
 
-動態分派 `&dyn`:
+動態派發 `&dyn`:
 
 建立特徵的動態引用。
 
@@ -95,6 +95,20 @@ fn main() {
     let circle = Circle { radius: 2.0 };
     let shape: &dyn Shape = &circle; // 借用一個 Circle 型別，作為 dyn Shape 使用
     print_area(shape); // 傳遞引用給函式
+    // 面積: 12.566370614359172
+}
+```
+
+改爲使用泛型為靜態派發 (編譯期):
+
+```rs
+fn print_area<T: Shape>(shape: &T) {
+    println!("面積: {}", shape.area());
+}
+
+fn main() {
+    let circle = Circle { radius: 2.0 };
+    print_area(&circle);
     // 面積: 12.566370614359172
 }
 ```
