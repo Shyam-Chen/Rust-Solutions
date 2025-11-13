@@ -171,7 +171,25 @@ fn main() {
 移動數字 0 至末尾:
 
 ```rs
+fn main() {
+    let mut nums = vec![0, 1, 0, 3, 12];
 
+    let mut left = 0; // 左指標，指向下次應該交換的非零元素位置
+    let mut right = 0; // 右指標，走訪整個陣列
+
+    while right < nums.len() {
+        // 如果右指標指向的數字不是 0
+        if nums[right] != 0 {
+            nums.swap(left, right); // 交換左指標和右指標的數字
+            left += 1; // 左指標移動到下一個位置
+        }
+
+        right += 1; // 右指標繼續向右移動
+    }
+
+    println!("{nums:?}");
+    // [1, 3, 12, 0, 0]
+}
 ```
 
 ## 鏈結串列 (Linked List)
@@ -1044,6 +1062,7 @@ fn binary_search(arr: &Vec<i32>, target: i32) -> Option<usize> {
 
     while left <= right {
         let mid = left + (right - left) / 2; // 避免溢位
+
         if arr[mid] == target {
             return Some(mid);
         } else if arr[mid] < target {
@@ -1094,13 +1113,15 @@ fn main() {
 4. 紀錄解 (Record / Solution): 當達到目標條件時，保存結果
 5. 剪枝 (Pruning): 提前排除不可能的路徑，提高效率
 
+全排列:
+
 ```rs
 fn main() {
     let permutation_length = 3; // 每個排列要有幾個元素
     let max_number = 3; // 可選數字的最大值
 
-    let mut current = Vec::new();
-    let mut solutions = Vec::new();
+    let mut current = Vec::new(); // 當前狀態
+    let mut solutions = Vec::new(); // 紀錄解
 
     fn backtrack(
         current: &mut Vec<u32>,
@@ -1123,6 +1144,8 @@ fn main() {
 
             // 嘗試
             current.push(i);
+
+            // 繼續探索下一個
             backtrack(current, solutions, permutation_length, max_number);
 
             // 回退
@@ -1155,6 +1178,44 @@ fn fibonacci(n: usize) -> u64 {
 fn main() {
     println!("{}", fibonacci(10)); // 55
 }
+```
+
+爬樓梯，爬到第 n 個階梯，每次爬 1 階或 2 階:
+
+```
+                    ___
+                ___| n
+            ___| 4
+        ___| 3
+    ___| 2
+___| 1
+ 0
+```
+
+```rs
+fn climb_stairs(n: usize) -> u64 {
+    let mut dp = vec![1_u64, 2];
+
+    for i in 2..=n {
+        dp.push(dp[i - 1] + dp[i - 2]);
+    }
+
+    dp[n - 1]
+}
+
+fn main() {
+    println!("{}", climb_stairs(4)); // 5
+}
+```
+
+爬到第 4 階，共有 5 種方式:
+
+```
+0 -> 1 -> 2 -> 3 -> 4
+0 -> 1 -> 2      -> 4
+0 -> 1      -> 3 -> 4
+0      -> 2 -> 3 -> 4
+0      -> 2      -> 4
 ```
 
 ## 貪婪 (Greedy)

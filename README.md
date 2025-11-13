@@ -66,6 +66,8 @@ Clap
 - [非同步 (Asynchronous)](./command-line/CommandLine.md#非同步-asynchronous)
 - [開箱 (Unboxing Crates)](./command-line/CommandLine.md#開箱-unboxing-crates)
 
+Clap Template
+
 ---
 
 ## 網頁應用 (Web Applications)
@@ -124,6 +126,10 @@ Leptos
   - iOS + 發布至 App Store (Apple TestFlight)
   - macOS + 發布至 App Store (Apple TestFlight)
 
+Leptos Template<br>
+Leptos + Axum Template<br>
+Leptos + Tauri Template
+
 ---
 
 ## 伺服器應用 (Server Applications)
@@ -173,6 +179,10 @@ Axum
 - 本地部署 (輕量化) + Kubernetes K3s
   - Raspberry Pi 5 Model B
 
+Axum Template<br>
+Axum + Leptos Template<br>
+Axum + GraphQL Template
+
 ---
 
 ## 嵌入式應用 (Embedded Applications)
@@ -196,3 +206,10 @@ Raspberry Pi
   - Jetson Orin Nano
 - STM32 + `embassy-stm32`
   - STM32F407
+
+Raspberry Pi Template<br>
+Raspberry Pi + Leptos + Tauri Template<br>
+Raspberry Pi Pico Template<br>
+Jetson Template<br>
+Jetson + Leptos + Tauri Template<br>
+STM32 Template
