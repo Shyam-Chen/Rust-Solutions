@@ -38,6 +38,17 @@ fn main() {
 }
 ```
 
+`path` 屬性:
+
+將 `src/math.rs` 改成 `src/elementary_arithmetic.rs`
+
+```rs
+#[path = "./elementary_arithmetic.rs"]
+mod math;
+
+use math::{add, sub};
+```
+
 ## 模組樹
 
 ```sh

@@ -1,6 +1,6 @@
 # 智慧指標 (Smart Pointers)
 
-## 堆積 (Heap) `Box<T>`
+## 堆積分配 (Heap Allocation) `Box<T>`
 
 Rust 預設所有變數都分配在堆疊 (stack) 上。
 

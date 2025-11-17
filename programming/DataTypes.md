@@ -119,13 +119,34 @@ https://doc.rust-lang.org/stable/std/primitive.str.html
 
 ```rs
 fn main() {
-    let s = "Hello, World!";
-    println!("{s}");
-    // Hello, World!
+    let name = "Alice Smith";
+    println!("{name}");
+    // Alice Smith
 
-    let first_word = &s[0..5];
-    println!("{first_word}");
-    // Hello
+    // [..]
+    let name = &name[..];
+    println!("{name}");
+    // Alice Smith
+
+    // [start..end]
+    let first_name = &name[0..5];
+    println!("{first_name}");
+    // Alice
+
+    // [..end]
+    let first_name = &name[..5];
+    println!("{first_name}");
+    // Alice
+
+    // [start..]
+    let last_name = &name[6..];
+    println!("{last_name}");
+    // Smith
+
+    // [start..=end]
+    let last_name = &name[6..=10];
+    println!("{last_name}");
+    // Smith
 }
 ```
 
@@ -265,7 +286,7 @@ fn main() {
         println!("{num}");
     }
 
-    // println!("{vec:?}"); // vec 的所有權在 for 迴圈中被消耗掉 (即已移動)
+    // println!("{vec:?}"); // ❌ vec 的所有權在 for 迴圈中被消耗掉 (即已移動)
 }
 ```
 
@@ -314,7 +335,7 @@ fn main() {
 fn main() {
     let vec = vec![1, 2, 3];
     vec.into_iter().for_each(|num| println!("{num}"));
-    // println!("{vec:?}");
+    // println!("{vec:?}"); // ❌
 }
 ```
 
@@ -484,7 +505,7 @@ fn main() {
 }
 ```
 
-在 `#[no_std]` 下，需改用 `use hashbrown::HashMap;`。
+在 `#[no_std]` 下，需改用 `use hashbrown::HashMap;`，或是需要在性能上壓榨極致也可以用。
 
 ## 雜湊集合 (Hash Sets)
 
@@ -506,7 +527,7 @@ fn main() {
 }
 ```
 
-在 `#[no_std]` 下，需改用 `use hashbrown::HashSet;`。
+在 `#[no_std]` 下，需改用 `use hashbrown::HashSet;`，或是需要在性能上壓榨極致也可以用。
 
 ## 型別別名 (Type Alias)
 

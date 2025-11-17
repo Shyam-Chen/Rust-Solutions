@@ -145,8 +145,8 @@ Axum
 - [Redis 鍵值對資料庫 (Redis Key-Value Database)](./server/Redis.md)
 - [資料流 (Streaming)](./server/Streaming.md)
 - [WebSocket 雙向通訊 (WebSocket Full-duplex Interaction)](./server/WebSocket.md)
-- 同構 (Isomorphic)
-  - `leptos`
+- 訊息佇列 (Message Queues) + `rdkafka`
+- 同構 (Isomorphic) + `leptos`
 - 人工智慧代理 (AI Agents)
   - Gemini (DeepMind) / ChatGPT (OpenAI) / Claude (Anthropic) + Qdrant
     - `swiftide-*` + stream + `leptos`
@@ -154,15 +154,15 @@ Axum
     - Tool Calling Agents
   - `candle-*` + Hugging Face + `qdrant-client` + Qdrant
 - 提供服務使用 GraphQL (`async-graphql`)
-- Email
-  - MJML
+- Email + `lettre`
+  - Email Builder + `mrml` + MJML
 - 多語言支援與國際化 (Internationalization)
 - 雲端服務部署
   - 容器化 + Docker
   - 部署到 Render + MongoDB Atlas + IDrive e2
   - 部署到 Redis Cloud + Render's Background Workers
   - 部署到 Qdrant Managed Cloud
-  - 申請設定 Gmail SMTP Server
+  - 申請設定 Gmail/Outlook SMTP Server
 - 雲端平台部署
   - 容器化全代管部署
     - Google Cloud Run

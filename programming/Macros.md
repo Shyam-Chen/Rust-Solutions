@@ -30,6 +30,28 @@ fn main() {
 }
 ```
 
+```rs
+macro_rules! max {
+    ($x:expr) => ($x);
+    ($x:expr, $($y:expr), +) => {{
+        let mut max_val = $x;
+
+        $(
+            if $y > max_val {
+                max_val = $y;
+            }
+        )*
+
+        max_val
+    }};
+}
+
+fn main() {
+    let result = max!(1, 3, 2, 5, 4);
+    println!("{result}"); // 5
+}
+```
+
 ## 內建
 
 ### `todo!`
