@@ -255,7 +255,7 @@ fn main() {
 }
 ```
 
-#### 疊代器 (Iterators)
+#### 迭代器 (Iterators)
 
 ```rs
 fn main() {

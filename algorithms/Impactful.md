@@ -76,14 +76,15 @@ Problems:
 | 121. Best Time to Buy and Sell Stock | Solution | Easy   | 詳解 |
 | 763. Partition Labels                | Solution | Medium | 詳解 |
 
-| Hashing                           |               |        |      |
-| --------------------------------- | ------------- | ------ | ---- |
-| 1. Two Sum                        | [Solution][1] | Easy   | 詳解 |
-| 49. Group Anagrams                | Solution      | Medium | 詳解 |
-| 128. Longest Consecutive Sequence | Solution      | Medium | 詳解 |
-| 560. Subarray Sum Equals K        | Solution      | Medium | 詳解 |
+| Hashing                           |               |        |                       |
+| --------------------------------- | ------------- | ------ | --------------------- |
+| 1. Two Sum                        | [Solution][1] | Easy   | [詳解][1-explanation] |
+| 49. Group Anagrams                | Solution      | Medium | 詳解                  |
+| 128. Longest Consecutive Sequence | Solution      | Medium | 詳解                  |
+| 560. Subarray Sum Equals K        | Solution      | Medium | 詳解                  |
 
-[1]: ./src/solutions/_1_two_sum.rs
+[1]: ./src/1.%20Two%20Sum/two_sum.rs
+[1-explanation]: ./src/1.%20Two%20Sum/README.md
 
 | Heap                                 |          |        |      |
 | ------------------------------------ | -------- | ------ | ---- |

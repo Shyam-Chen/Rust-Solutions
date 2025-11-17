@@ -135,7 +135,7 @@ fn main() {
 // 結束
 ```
 
-## 疊代器迴圈 (For Loops)
+## 迭代器迴圈 (For Loops)
 
 ```rs
 fn main() {

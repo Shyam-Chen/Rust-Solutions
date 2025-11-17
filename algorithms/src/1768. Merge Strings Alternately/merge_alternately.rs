@@ -7,13 +7,16 @@ impl Solution {
         let mut chars2 = word2.chars();
 
         loop {
+            // 每次迴圈同時從兩個迭代器取出下一個字元
             match (chars1.next(), chars2.next()) {
+                // 交替加入 result
                 (Some(c1), Some(c2)) => {
                     result.push(c1);
                     result.push(c2);
                 }
                 (Some(c1), None) => result.push(c1),
                 (None, Some(c2)) => result.push(c2),
+                // 兩個字串的所有字元都取完，跳出迴圈
                 (None, None) => break,
             }
         }
@@ -23,22 +26,5 @@ impl Solution {
 }
 
 #[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn merge_alternately() {
-        assert_eq!(
-            Solution::merge_alternately(String::from("abc"), String::from("pqr")),
-            "apbqcr"
-        );
-        assert_eq!(
-            Solution::merge_alternately(String::from("ab"), String::from("pqrs")),
-            "apbqrs"
-        );
-        assert_eq!(
-            Solution::merge_alternately(String::from("abcd"), String::from("pq")),
-            "apbqcd"
-        );
-    }
-}
+#[path = "./merge_alternately_test.rs"]
+mod tests;

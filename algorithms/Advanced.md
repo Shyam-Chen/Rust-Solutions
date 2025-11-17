@@ -36,7 +36,7 @@ Problems:
 | 28. Find the Index of the First Occurrence in a String | Solution       | Easy   | 詳解 |
 | 68. Text Justification                                 | Solution       | Hard   | 詳解 |
 
-[88]: ./src/solutions/_88_merge.rs
+[88]: ./src/88.%20Merge%20Sorted%20Array/merge.rs
 
 | Two Pointers                            |          |        |      |
 | --------------------------------------- | -------- | ------ | ---- |
@@ -61,19 +61,20 @@ Problems:
 | 73. Set Matrix Zeroes | Solution | Medium | 詳解 |
 | 289. Game of Life     | Solution | Medium | 詳解 |
 
-| Hashmap                           |               |        |      |
-| --------------------------------- | ------------- | ------ | ---- |
-| 383. Ransom Note                  | Solution      | Easy   | 詳解 |
-| 205. Isomorphic Strings           | Solution      | Easy   | 詳解 |
-| 290. Word Pattern                 | Solution      | Easy   | 詳解 |
-| 242. Valid Anagram                | Solution      | Easy   | 詳解 |
-| 49. Group Anagrams                | Solution      | Medium | 詳解 |
-| 1. Two Sum                        | [Solution][1] | Easy   | 詳解 |
-| 202. Happy Number                 | Solution      | Easy   | 詳解 |
-| 219. Contains Duplicate II        | Solution      | Easy   | 詳解 |
-| 128. Longest Consecutive Sequence | Solution      | Medium | 詳解 |
+| Hashmap                           |               |        |                       |
+| --------------------------------- | ------------- | ------ | --------------------- |
+| 383. Ransom Note                  | Solution      | Easy   | 詳解                  |
+| 205. Isomorphic Strings           | Solution      | Easy   | 詳解                  |
+| 290. Word Pattern                 | Solution      | Easy   | 詳解                  |
+| 242. Valid Anagram                | Solution      | Easy   | 詳解                  |
+| 49. Group Anagrams                | Solution      | Medium | 詳解                  |
+| 1. Two Sum                        | [Solution][1] | Easy   | [詳解][1-explanation] |
+| 202. Happy Number                 | Solution      | Easy   | 詳解                  |
+| 219. Contains Duplicate II        | Solution      | Easy   | 詳解                  |
+| 128. Longest Consecutive Sequence | Solution      | Medium | 詳解                  |
 
-[1]: ./src/solutions/_1_two_sum.rs
+[1]: ./src/1.%20Two%20Sum/two_sum.rs
+[1-explanation]: ./src/1.%20Two%20Sum/README.md
 
 | Intervals                                       |          |        |      |
 | ----------------------------------------------- | -------- | ------ | ---- |
@@ -121,7 +122,7 @@ Problems:
 | 222. Count Complete Tree Nodes                                  | Solution        | Easy   | 詳解 |
 | 236. Lowest Common Ancestor of a Binary Tree                    | Solution        | Medium | 詳解 |
 
-[100]: ./src/solutions/_100_is_same_tree.rs
+[100]: ./src/100.%20Same%20Tree/is_same_tree.rs
 
 | Binary Tree BFS                               |          |        |      |
 | --------------------------------------------- | -------- | ------ | ---- |
