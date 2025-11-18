@@ -13,7 +13,7 @@ Problems:
 | 1768. Merge Strings Alternately                | [Solution][1768] | Easy   | [詳解][1768-explanation] |
 | 1071. Greatest Common Divisor of Strings       | [Solution][1071] | Easy   | [詳解][1071-explanation] |
 | 1431. Kids With the Greatest Number of Candies | [Solution][1431] | Easy   | [詳解][1431-explanation] |
-| 605. Can Place Flowers                         | Solution         | Easy   | 詳解                     |
+| 605. Can Place Flowers                         | [Solution][605]  | Easy   | [詳解][605-explanation]  |
 | 345. Reverse Vowels of a String                | Solution         | Easy   | 詳解                     |
 | 151. Reverse Words in a String                 | Solution         | Medium | 詳解                     |
 | 238. Product of Array Except Self              | Solution         | Medium | 詳解                     |
@@ -26,6 +26,8 @@ Problems:
 [1071-explanation]: ./src/1071.%20Greatest%20Common%20Divisor%20of%20Strings/README.md
 [1431]: ./src/1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies/kids_with_candies.rs
 [1431-explanation]: ./src/1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies/README.md
+[605]: ./src/605.%20Can%20Place%20Flowers/can_place_flowers.rs
+[605-explanation]: ./src/605.%20Can%20Place%20Flowers/README.md
 
 | Two Pointers                    |          |        |      |
 | ------------------------------- | -------- | ------ | ---- |

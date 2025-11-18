@@ -12,6 +12,9 @@ mod _100_is_same_tree;
 #[path = "./208. Implement Trie (Prefix Tree)/trie.rs"]
 mod _208_trie;
 
+#[path = "./605. Can Place Flowers/can_place_flowers.rs"]
+mod _605_can_place_flowers;
+
 #[path = "./1071. Greatest Common Divisor of Strings/gcd_of_strings.rs"]
 mod _1071_gcd_of_strings;
 
