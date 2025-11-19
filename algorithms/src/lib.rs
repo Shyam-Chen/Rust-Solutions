@@ -9,8 +9,23 @@ mod _88_merge;
 #[path = "./100. Same Tree/is_same_tree.rs"]
 mod _100_is_same_tree;
 
+#[path = "./151. Reverse Words in a String/reverse_words.rs"]
+mod _151_reverse_words;
+
 #[path = "./208. Implement Trie (Prefix Tree)/trie.rs"]
 mod _208_trie;
+
+#[path = "./238. Product of Array Except Self/product_except_self.rs"]
+mod _238_product_except_self;
+
+#[path = "./334. Increasing Triplet Subsequence/increasing_triplet.rs"]
+mod _334_increasing_triplet;
+
+#[path = "./345. Reverse Vowels of a String/reverse_vowels.rs"]
+mod _345_reverse_vowels;
+
+#[path = "./443. String Compression/compress.rs"]
+mod _443_compress;
 
 #[path = "./605. Can Place Flowers/can_place_flowers.rs"]
 mod _605_can_place_flowers;

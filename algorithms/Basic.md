@@ -14,11 +14,11 @@ Problems:
 | 1071. Greatest Common Divisor of Strings       | [Solution][1071] | Easy   | [詳解][1071-explanation] |
 | 1431. Kids With the Greatest Number of Candies | [Solution][1431] | Easy   | [詳解][1431-explanation] |
 | 605. Can Place Flowers                         | [Solution][605]  | Easy   | [詳解][605-explanation]  |
-| 345. Reverse Vowels of a String                | Solution         | Easy   | 詳解                     |
-| 151. Reverse Words in a String                 | Solution         | Medium | 詳解                     |
-| 238. Product of Array Except Self              | Solution         | Medium | 詳解                     |
-| 334. Increasing Triplet Subsequence            | Solution         | Medium | 詳解                     |
-| 443. String Compression                        | Solution         | Medium | 詳解                     |
+| 345. Reverse Vowels of a String                | [Solution][345]  | Easy   | [詳解][345-explanation]  |
+| 151. Reverse Words in a String                 | [Solution][151]  | Medium | [詳解][151-explanation]  |
+| 238. Product of Array Except Self              | [Solution][238]  | Medium | [詳解][238-explanation]  |
+| 334. Increasing Triplet Subsequence            | [Solution][334]  | Medium | [詳解][334-explanation]  |
+| 443. String Compression                        | [Solution][443]  | Medium | [詳解][443-explanation]  |
 
 [1768]: ./src/1768.%20Merge%20Strings%20Alternately/merge_alternately.rs
 [1768-explanation]: ./src/1768.%20Merge%20Strings%20Alternately/README.md
@@ -28,6 +28,16 @@ Problems:
 [1431-explanation]: ./src/1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies/README.md
 [605]: ./src/605.%20Can%20Place%20Flowers/can_place_flowers.rs
 [605-explanation]: ./src/605.%20Can%20Place%20Flowers/README.md
+[345]: ./src/345.%20Reverse%20Vowels%20of%20a%20String/reverse_vowels.rs
+[345-explanation]: ./src/345.%20Reverse%20Vowels%20of%20a%20String/README.md
+[151]: ./src/151.%20Reverse%20Words%20in%20a%20String/reverse_words.rs
+[151-explanation]: ./src/151.%20Reverse%20Words%20in%20a%20String/README.md
+[238]: ./src/238.%20Product%20of%20Array%20Except%20Self/product_except_self.rs
+[238-explanation]: ./src/238.%20Product%20of%20Array%20Except%20Self/README.md
+[334]: ./src/334.%20Increasing%20Triplet%20Subsequence/increasing_triplet.rs
+[334-explanation]: ./src/334.%20Increasing%20Triplet%20Subsequence/README.md
+[443]: ./src/443.%20String%20Compression/compress.rs
+[443-explanation]: ./src/443.%20String%20Compression/README.md
 
 | Two Pointers                    |          |        |      |
 | ------------------------------- | -------- | ------ | ---- |

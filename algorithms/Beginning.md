@@ -312,7 +312,7 @@ impl<T> Stack<T> {
         self.items.push(item);
     }
 
-    // 移除並返回堆疊頂部的元素
+    // 移除並回傳堆疊頂部的元素
     pub fn pop(&mut self) -> Option<T> {
         self.items.pop()
     }
@@ -327,7 +327,7 @@ impl<T> Stack<T> {
         self.items.is_empty()
     }
 
-    // 返回堆疊中的元素數量
+    // 回傳堆疊中的元素數量
     pub fn size(&self) -> usize {
         self.items.len()
     }
