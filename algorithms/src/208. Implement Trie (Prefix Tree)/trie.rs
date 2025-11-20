@@ -26,8 +26,8 @@ impl Trie {
     fn insert(&mut self, word: String) {
         let mut node = &mut self.root;
 
-        for char in word.chars() {
-            node = node.children.entry(char).or_insert(TrieNode::new());
+        for c in word.chars() {
+            node = node.children.entry(c).or_insert(TrieNode::new());
         }
 
         node.is_end_of_word = true;
@@ -36,8 +36,8 @@ impl Trie {
     fn search(&self, word: String) -> bool {
         let mut node = &self.root;
 
-        for char in word.chars() {
-            match node.children.get(&char) {
+        for c in word.chars() {
+            match node.children.get(&c) {
                 Some(next) => node = next,
                 None => return false,
             }
@@ -49,8 +49,8 @@ impl Trie {
     fn starts_with(&self, prefix: String) -> bool {
         let mut node = &self.root;
 
-        for char in prefix.chars() {
-            match node.children.get(&char) {
+        for c in prefix.chars() {
+            match node.children.get(&c) {
                 Some(next) => node = next,
                 None => return false,
             }

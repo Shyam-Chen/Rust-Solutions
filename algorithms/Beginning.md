@@ -25,13 +25,15 @@ fn main() {
 fn main() {
     let sentence = "The quick brown fox jumps over the lazy dog.";
     println!("{}", sentence.as_bytes()[4] as char); // q
+    // 如遇到 UTF-8 編碼錯誤，須改用 chars()
 }
 ```
 
 ```rs
 fn main() {
     let sentence = "The quick brown fox jumps over the lazy dog.";
-    let chars: Vec<char> = sentence.chars().collect();
+    // Vec<T> 是一個泛型型別，使用底線 _ 讓型別由編譯器自動推斷
+    let chars: Vec<_> = sentence.chars().collect();
     println!("{}", chars[4]); // q
 }
 ```

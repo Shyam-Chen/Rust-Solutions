@@ -39,12 +39,17 @@ Problems:
 [443]: ./src/443.%20String%20Compression/compress.rs
 [443-explanation]: ./src/443.%20String%20Compression/README.md
 
-| Two Pointers                    |          |        |      |
-| ------------------------------- | -------- | ------ | ---- |
-| 283. Move Zeroes                | Solution | Easy   | 詳解 |
-| 392. Is Subsequence             | Solution | Easy   | 詳解 |
-| 11. Container With Most Water   | Solution | Medium | 詳解 |
-| 1679. Max Number of K-Sum Pairs | Solution | Medium | 詳解 |
+| Two Pointers                    |                 |        |                         |
+| ------------------------------- | --------------- | ------ | ----------------------- |
+| 283. Move Zeroes                | [Solution][283] | Easy   | [詳解][283-explanation] |
+| 392. Is Subsequence             | [Solution][392] | Easy   | [詳解][392-explanation] |
+| 11. Container With Most Water   | Solution        | Medium | 詳解                    |
+| 1679. Max Number of K-Sum Pairs | Solution        | Medium | 詳解                    |
+
+[283]: ./src/283.%20Move%20Zeroes/move_zeroes.rs
+[283-explanation]: ./src/283.%20Move%20Zeroes/README.md
+[392]: ./src/392.%20Is%20Subsequence/is_subsequence.rs
+[392-explanation]: ./src/392.%20Is%20Subsequence/README.md
 
 | Sliding Window                                                |          |        |      |
 | ------------------------------------------------------------- | -------- | ------ | ---- |

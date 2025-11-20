@@ -30,7 +30,7 @@ impl Solution {
         }
 
         // 收集所有母音並反轉
-        let vowels: Vec<char> = s.chars().filter(|&c| is_vowel(c)).rev().collect();
+        let vowels: Vec<_> = s.chars().filter(|&c| is_vowel(c)).rev().collect();
 
         // 用來依序取出反轉後的母音
         let mut iter = vowels.into_iter();
