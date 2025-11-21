@@ -83,7 +83,7 @@ fn main() {
             continue; // 跳過當前計數為 2
         }
 
-        println!("Count = {count}",); // 當前計數
+        println!("Count = {count}"); // 當前計數
 
         if count == 3 {
             break; // 跳出 loop

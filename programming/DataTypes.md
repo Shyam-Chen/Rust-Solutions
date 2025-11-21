@@ -154,7 +154,7 @@ fn main() {
 
 ```rs
 fn greet(name: &str) {
-    println!("Hello, {name}!",);
+    println!("Hello, {name}!");
 }
 
 fn main() {
@@ -247,35 +247,6 @@ fn main() {
 }
 ```
 
-#### 排序
-
-```rs
-fn main() {
-    let mut vec = vec![1, 30, 4, 21, 100000];
-    vec.sort();
-    println!("{vec:?}");
-    // [1, 4, 21, 30, 100000]
-}
-```
-
-```rs
-fn main() {
-    let mut vec = vec![1, 30, 4, 21, 100000];
-    vec.sort_by(|a, b| b.cmp(a));
-    println!("{vec:?}");
-    // [100000, 30, 21, 4, 1]
-}
-```
-
-```rs
-fn main() {
-    let mut fruits = vec!["Apple", "pear", "Banana", "orange"];
-    fruits.sort_by_key(|s| s.to_lowercase());
-    println!("{fruits:?}");
-    // ["Apple", "Banana", "orange", "pear"]
-}
-```
-
 #### 迭代器 (Iterators)
 
 ```rs
@@ -304,7 +275,29 @@ fn main() {
 }
 ```
 
-不可變:
+```rs
+fn main() {
+    let vec = vec![1, 2, 3];
+
+    // 引用模式
+    for &num in &vec {
+        // 沒有 &，因為自動完成了解構
+        if num > 0 {
+            println!("{num}");
+        }
+    }
+
+    // 手動解引用
+    for num_ref in &vec {
+        // 明確解引用
+        if *num_ref > 0 {
+            println!("{}", *num_ref);
+        }
+    }
+}
+```
+
+不可變 `iter`:
 
 ```rs
 fn main() {
@@ -314,7 +307,7 @@ fn main() {
 }
 ```
 
-可變:
+可變 `iter_mut`:
 
 ```rs
 fn main() {
@@ -329,13 +322,54 @@ fn main() {
 }
 ```
 
-同 `for` 迴圈:
+`into_iter`，同 `for` 迴圈:
 
 ```rs
 fn main() {
     let vec = vec![1, 2, 3];
     vec.into_iter().for_each(|num| println!("{num}"));
     // println!("{vec:?}"); // ❌
+}
+```
+
+索引:
+
+```rs
+fn main() {
+    let vec = vec![1, 2, 3];
+
+    for (idx, num) in vec.iter().enumerate() {
+        println!("索引: {idx}, 數值: {num}");
+    }
+}
+```
+
+#### 排序
+
+```rs
+fn main() {
+    let mut vec = vec![1, 30, 4, 21, 100000];
+    vec.sort();
+    println!("{vec:?}");
+    // [1, 4, 21, 30, 100000]
+}
+```
+
+```rs
+fn main() {
+    let mut vec = vec![1, 30, 4, 21, 100000];
+    vec.sort_by(|a, b| b.cmp(a));
+    println!("{vec:?}");
+    // [100000, 30, 21, 4, 1]
+}
+```
+
+```rs
+fn main() {
+    let mut fruits = vec!["Apple", "pear", "Banana", "orange"];
+    fruits.sort_by_key(|s| s.to_lowercase());
+    println!("{fruits:?}");
+    // ["Apple", "Banana", "orange", "pear"]
 }
 ```
 
@@ -418,6 +452,29 @@ fn main() {
 
 ## 列舉 (Enumerations)
 
+```rs
+#![allow(dead_code)]
+
+enum Direction {
+    Up,
+    Right,
+    Down,
+    Left,
+}
+
+fn main() {
+    let dir = Direction::Up;
+
+    match dir {
+        Direction::Up => println!("Up"),
+        Direction::Right => println!("Right"),
+        Direction::Down => println!("Down"),
+        Direction::Left => println!("Left"),
+    }
+}
+// Up
+```
+
 ### 內建列舉
 
 #### `Option<T>`
@@ -460,36 +517,9 @@ fn main() {
 // Error2: Division by zero
 ```
 
-#### `Poll<T>`
-
-https://doc.rust-lang.org/std/task/enum.Poll.html
-
-### 自訂列舉
-
-```rs
-#![allow(dead_code)]
-
-enum Direction {
-    Up,
-    Right,
-    Down,
-    Left,
-}
-
-fn main() {
-    let dir = Direction::Up;
-
-    match dir {
-        Direction::Up => println!("Up"),
-        Direction::Right => println!("Right"),
-        Direction::Down => println!("Down"),
-        Direction::Left => println!("Left"),
-    }
-}
-// Up
-```
-
 ## 雜湊映射 (Hash Maps)
+
+https://doc.rust-lang.org/std/collections/struct.HashMap.html
 
 ```rs
 use std::collections::HashMap;
@@ -507,7 +537,21 @@ fn main() {
 
 在 `#[no_std]` 下，需改用 `use hashbrown::HashMap;`，或是需要在性能上壓榨極致也可以用。
 
+轉換 `Vec` 為 `HashMap`:
+
+```rs
+use std::collections::HashMap;
+
+fn main() {
+    let vec = vec![("Alice", 60), ("Bob", 70), ("Carol", 90)];
+    let map: HashMap<_, _> = vec.into_iter().collect();
+    println!("{map:?}"); // {"Alice": 60, "Bob": 70, "Carol": 90} (順序未定)
+}
+```
+
 ## 雜湊集合 (Hash Sets)
+
+https://doc.rust-lang.org/std/collections/struct.HashSet.html
 
 ```rs
 use std::collections::HashSet;
@@ -528,6 +572,18 @@ fn main() {
 ```
 
 在 `#[no_std]` 下，需改用 `use hashbrown::HashSet;`，或是需要在性能上壓榨極致也可以用。
+
+轉換 `Vec` 為 `HashSet`:
+
+```rs
+use std::collections::HashSet;
+
+fn main() {
+    let vec = vec![1, 2, 3, 3, 5];
+    let set: HashSet<_> = vec.into_iter().collect();
+    println!("{set:?}"); // {1, 2, 3, 5} (順序未定)
+}
+```
 
 ## 型別別名 (Type Alias)
 
