@@ -9,7 +9,7 @@
 ```coffee
 輸入: word1 = "abc", word2 = "pqr"
 輸出: "apbqcr"
-說明: 字串合併情況如下所示：
+說明: 字串合併情況如下所示:
 word1: a   b   c
 word2:   p   q   r
 合併後: a p b q c r
@@ -39,7 +39,7 @@ word2:   p   q
 
 ## 解題
 
-### 使用迭代器，直到都取完字元：
+### 使用迭代器，直到都取完字元
 
 ```rs
 impl Solution {
@@ -68,13 +68,13 @@ impl Solution {
 }
 ```
 
-### 使用 `flat_map` 方法，將兩個字串的字元交替合併：
+### 使用 `flat_map` 方法，將兩個字串的字元交替合併
 
 ```rs
 
 ```
 
-### 使用雙指標 (Two Pointers)：
+### 使用雙指標 (Two Pointers)
 
 ```rs
 

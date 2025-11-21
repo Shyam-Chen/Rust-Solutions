@@ -47,7 +47,7 @@ impl Solution {
 }
 ```
 
-### 判斷是否有字串的最大公因數：
+判斷是否有字串的最大公因數：
 
 ```rs
 if str1.clone() + &str2 != str2.clone() + &str1 {
@@ -77,7 +77,7 @@ str2 + str1 = x 重複 (b + a) 次
 
 這檢查是一個**快速過濾條件**，避免進一步計算 GCD 時浪費時間。
 
-### 計算長度的最大公因數 (GCD)：
+計算長度的最大公因數 (GCD)：
 
 ```rs
 fn gcd(a: usize, b: usize) -> usize {

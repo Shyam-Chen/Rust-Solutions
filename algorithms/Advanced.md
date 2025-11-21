@@ -9,42 +9,51 @@ Must-do List for Interview Prep
 
 Problems:
 
-| Array / String                                         |                |        |      |
-| ------------------------------------------------------ | -------------- | ------ | ---- |
-| 88. Merge Sorted Array                                 | [Solution][88] | Easy   | 詳解 |
-| 27. Remove Element                                     | Solution       | Easy   | 詳解 |
-| 26. Remove Duplicates from Sorted Array                | Solution       | Easy   | 詳解 |
-| 80. Remove Duplicates from Sorted Array II             | Solution       | Medium | 詳解 |
-| 169. Majority Element                                  | Solution       | Easy   | 詳解 |
-| 189. Rotate Array                                      | Solution       | Medium | 詳解 |
-| 121. Best Time to Buy and Sell Stock                   | Solution       | Easy   | 詳解 |
-| 122. Best Time to Buy and Sell Stock II                | Solution       | Medium | 詳解 |
-| 55. Jump Game                                          | Solution       | Medium | 詳解 |
-| 45. Jump Game II                                       | Solution       | Medium | 詳解 |
-| 274. H-Index                                           | Solution       | Medium | 詳解 |
-| 380. Insert Delete GetRandom O(1)                      | Solution       | Medium | 詳解 |
-| 238. Product of Array Except Self                      | Solution       | Medium | 詳解 |
-| 134. Gas Station                                       | Solution       | Medium | 詳解 |
-| 135. Candy                                             | Solution       | Hard   | 詳解 |
-| 42. Trapping Rain Water                                | Solution       | Hard   | 詳解 |
-| 13. Roman to Integer                                   | Solution       | Easy   | 詳解 |
-| 12. Integer to Roman                                   | Solution       | Medium | 詳解 |
-| 58. Length of Last Word                                | Solution       | Easy   | 詳解 |
-| 14. Longest Common Prefix                              | Solution       | Easy   | 詳解 |
-| 151. Reverse Words in a String                         | Solution       | Medium | 詳解 |
-| 6. Zigzag Conversion                                   | Solution       | Medium | 詳解 |
-| 28. Find the Index of the First Occurrence in a String | Solution       | Easy   | 詳解 |
-| 68. Text Justification                                 | Solution       | Hard   | 詳解 |
+| Array / String                                         |                 |        |                         |
+| ------------------------------------------------------ | --------------- | ------ | ----------------------- |
+| 88. Merge Sorted Array                                 | [Solution][88]  | Easy   | 詳解                    |
+| 27. Remove Element                                     | Solution        | Easy   | 詳解                    |
+| 26. Remove Duplicates from Sorted Array                | Solution        | Easy   | 詳解                    |
+| 80. Remove Duplicates from Sorted Array II             | Solution        | Medium | 詳解                    |
+| 169. Majority Element                                  | Solution        | Easy   | 詳解                    |
+| 189. Rotate Array                                      | Solution        | Medium | 詳解                    |
+| 121. Best Time to Buy and Sell Stock                   | Solution        | Easy   | 詳解                    |
+| 122. Best Time to Buy and Sell Stock II                | Solution        | Medium | 詳解                    |
+| 55. Jump Game                                          | Solution        | Medium | 詳解                    |
+| 45. Jump Game II                                       | Solution        | Medium | 詳解                    |
+| 274. H-Index                                           | Solution        | Medium | 詳解                    |
+| 380. Insert Delete GetRandom O(1)                      | Solution        | Medium | 詳解                    |
+| 238. Product of Array Except Self                      | [Solution][238] | Medium | [詳解][238-explanation] |
+| 134. Gas Station                                       | Solution        | Medium | 詳解                    |
+| 135. Candy                                             | Solution        | Hard   | 詳解                    |
+| 42. Trapping Rain Water                                | Solution        | Hard   | 詳解                    |
+| 13. Roman to Integer                                   | Solution        | Easy   | 詳解                    |
+| 12. Integer to Roman                                   | Solution        | Medium | 詳解                    |
+| 58. Length of Last Word                                | Solution        | Easy   | 詳解                    |
+| 14. Longest Common Prefix                              | Solution        | Easy   | 詳解                    |
+| 151. Reverse Words in a String                         | [Solution][151] | Medium | [詳解][151-explanation] |
+| 6. Zigzag Conversion                                   | Solution        | Medium | 詳解                    |
+| 28. Find the Index of the First Occurrence in a String | Solution        | Easy   | 詳解                    |
+| 68. Text Justification                                 | Solution        | Hard   | 詳解                    |
 
 [88]: ./src/88.%20Merge%20Sorted%20Array/merge.rs
+[238]: ./src/238.%20Product%20of%20Array%20Except%20Self/product_except_self.rs
+[238-explanation]: ./src/238.%20Product%20of%20Array%20Except%20Self/README.md
+[151]: ./src/151.%20Reverse%20Words%20in%20a%20String/reverse_words.rs
+[151-explanation]: ./src/151.%20Reverse%20Words%20in%20a%20String/README.md
 
-| Two Pointers                            |          |        |      |
-| --------------------------------------- | -------- | ------ | ---- |
-| 125. Valid Palindrome                   | Solution | Easy   | 詳解 |
-| 392. Is Subsequence                     | Solution | Easy   | 詳解 |
-| 167. Two Sum II - Input Array Is Sorted | Solution | Medium | 詳解 |
-| 11. Container With Most Water           | Solution | Medium | 詳解 |
-| 15. 3Sum                                | Solution | Medium | 詳解 |
+| Two Pointers                            |                 |        |                         |
+| --------------------------------------- | --------------- | ------ | ----------------------- |
+| 125. Valid Palindrome                   | Solution        | Easy   | 詳解                    |
+| 392. Is Subsequence                     | [Solution][392] | Easy   | [詳解][392-explanation] |
+| 167. Two Sum II - Input Array Is Sorted | Solution        | Medium | 詳解                    |
+| 11. Container With Most Water           | [Solution][11]  | Medium | [詳解][11-explanation]  |
+| 15. 3Sum                                | Solution        | Medium | 詳解                    |
+
+[392]: ./src/392.%20Is%20Subsequence/is_subsequence.rs
+[392-explanation]: ./src/392.%20Is%20Subsequence/README.md
+[11]: ./src/11.%20Container%20With%20Most%20Water/max_area.rs
+[11-explanation]: ./src/11.%20Container%20With%20Most%20Water/README.md
 
 | Sliding Window                                    |          |        |      |
 | ------------------------------------------------- | -------- | ------ | ---- |

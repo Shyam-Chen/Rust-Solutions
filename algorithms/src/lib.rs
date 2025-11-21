@@ -3,6 +3,9 @@
 #[path = "./1. Two Sum/two_sum.rs"]
 mod _1_two_sum;
 
+#[path = "./11. Container With Most Water/max_area.rs"]
+mod _11_max_area;
+
 #[path = "./88. Merge Sorted Array/merge.rs"]
 mod _88_merge;
 
@@ -41,6 +44,9 @@ mod _1071_gcd_of_strings;
 
 #[path = "./1431. Kids With the Greatest Number of Candies/kids_with_candies.rs"]
 mod _1431_kids_with_candies;
+
+#[path = "./1679. Max Number of K-Sum Pairs/max_operations.rs"]
+mod _1679_max_operations;
 
 #[path = "./1768. Merge Strings Alternately/merge_alternately.rs"]
 mod _1768_merge_alternately;

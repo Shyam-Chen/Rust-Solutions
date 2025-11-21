@@ -1,6 +1,6 @@
-# Rust Solutions
+# Rust Journey
 
-🦀 Rust Journey: From Zero to Hero, Open Source to Business Applications
+🦀 From Zero to Hero, Open Source to Business Applications
 
 ---
 
@@ -203,9 +203,10 @@ Raspberry Pi
 - MQTT 通訊協定 + `rumqttc`
 - NFC Module 讀寫卡模組 PN532
 - Jetson
-  - Jetson Orin Nano
+  - Jetson Orin Nano (8GB)
 - STM32 + `embassy-stm32`
-  - STM32F407
+  - STM32F407(VG)
+- Digi-Key 電子元件 (Electronic Components)
 
 Raspberry Pi Template<br>
 Raspberry Pi + Leptos + Tauri Template<br>

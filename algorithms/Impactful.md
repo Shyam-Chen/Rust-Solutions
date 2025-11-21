@@ -131,11 +131,14 @@ Problems:
 | 394. Decode String                 | Solution | Medium | 詳解 |
 | 739. Daily Temperatures            | Solution | Medium | 詳解 |
 
-| Two Pointers                  |          |        |      |
-| ----------------------------- | -------- | ------ | ---- |
-| 11. Container With Most Water | Solution | Medium | 詳解 |
-| 15. 3Sum                      | Solution | Medium | 詳解 |
-| 42. Trapping Rain Water       | Solution | Easy   | 詳解 |
+| Two Pointers                  |                |        |                        |
+| ----------------------------- | -------------- | ------ | ---------------------- |
+| 11. Container With Most Water | [Solution][11] | Medium | [詳解][11-explanation] |
+| 15. 3Sum                      | Solution       | Medium | 詳解                   |
+| 42. Trapping Rain Water       | Solution       | Easy   | 詳解                   |
+
+[11]: ./src/11.%20Container%20With%20Most%20Water/max_area.rs
+[11-explanation]: ./src/11.%20Container%20With%20Most%20Water/README.md
 
 | Trie                              |                 |        |      |
 | --------------------------------- | --------------- | ------ | ---- |
@@ -143,15 +146,18 @@ Problems:
 
 [208]: ./src/solutions/_208_trie.rs
 
-| Misc                              |          |        |      |
-| --------------------------------- | -------- | ------ | ---- |
-| 31. Next Permutation              | Solution | Medium | 詳解 |
-| 41. First Missing Positive        | Solution | Hard   | 詳解 |
-| 53. Maximum Subarray              | Solution | Medium | 詳解 |
-| 56. Merge Intervals               | Solution | Medium | 詳解 |
-| 75. Sort Colors                   | Solution | Medium | 詳解 |
-| 136. Single Number                | Solution | Easy   | 詳解 |
-| 169. Majority Element             | Solution | Easy   | 詳解 |
-| 189. Rotate Array                 | Solution | Medium | 詳解 |
-| 238. Product of Array Except Self | Solution | Medium | 詳解 |
-| 287. Find the Duplicate Number    | Solution | Medium | 詳解 |
+| Misc                              |                 |        |                         |
+| --------------------------------- | --------------- | ------ | ----------------------- |
+| 31. Next Permutation              | Solution        | Medium | 詳解                    |
+| 41. First Missing Positive        | Solution        | Hard   | 詳解                    |
+| 53. Maximum Subarray              | Solution        | Medium | 詳解                    |
+| 56. Merge Intervals               | Solution        | Medium | 詳解                    |
+| 75. Sort Colors                   | Solution        | Medium | 詳解                    |
+| 136. Single Number                | Solution        | Easy   | 詳解                    |
+| 169. Majority Element             | Solution        | Easy   | 詳解                    |
+| 189. Rotate Array                 | Solution        | Medium | 詳解                    |
+| 238. Product of Array Except Self | [Solution][238] | Medium | [詳解][238-explanation] |
+| 287. Find the Duplicate Number    | Solution        | Medium | 詳解                    |
+
+[238]: ./src/238.%20Product%20of%20Array%20Except%20Self/product_except_self.rs
+[238-explanation]: ./src/238.%20Product%20of%20Array%20Except%20Self/README.md

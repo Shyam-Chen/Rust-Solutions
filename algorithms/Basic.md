@@ -39,17 +39,21 @@ Problems:
 [443]: ./src/443.%20String%20Compression/compress.rs
 [443-explanation]: ./src/443.%20String%20Compression/README.md
 
-| Two Pointers                    |                 |        |                         |
-| ------------------------------- | --------------- | ------ | ----------------------- |
-| 283. Move Zeroes                | [Solution][283] | Easy   | [詳解][283-explanation] |
-| 392. Is Subsequence             | [Solution][392] | Easy   | [詳解][392-explanation] |
-| 11. Container With Most Water   | Solution        | Medium | 詳解                    |
-| 1679. Max Number of K-Sum Pairs | Solution        | Medium | 詳解                    |
+| Two Pointers                    |                  |        |                          |
+| ------------------------------- | ---------------- | ------ | ------------------------ |
+| 283. Move Zeroes                | [Solution][283]  | Easy   | [詳解][283-explanation]  |
+| 392. Is Subsequence             | [Solution][392]  | Easy   | [詳解][392-explanation]  |
+| 11. Container With Most Water   | [Solution][11]   | Medium | [詳解][11-explanation]   |
+| 1679. Max Number of K-Sum Pairs | [Solution][1679] | Medium | [詳解][1679-explanation] |
 
 [283]: ./src/283.%20Move%20Zeroes/move_zeroes.rs
 [283-explanation]: ./src/283.%20Move%20Zeroes/README.md
 [392]: ./src/392.%20Is%20Subsequence/is_subsequence.rs
 [392-explanation]: ./src/392.%20Is%20Subsequence/README.md
+[11]: ./src/11.%20Container%20With%20Most%20Water/max_area.rs
+[11-explanation]: ./src/11.%20Container%20With%20Most%20Water/README.md
+[1679]: ./src/1679.%20Max%20Number%20of%20K-Sum%20Pairs/max_operations.rs
+[1679-explanation]: ./src/1679.%20Max%20Number%20of%20K-Sum%20Pairs/README.md
 
 | Sliding Window                                                |          |        |      |
 | ------------------------------------------------------------- | -------- | ------ | ---- |
