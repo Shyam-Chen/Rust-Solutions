@@ -55,12 +55,15 @@ Problems:
 [1679]: ./src/1679.%20Max%20Number%20of%20K-Sum%20Pairs/max_operations.rs
 [1679-explanation]: ./src/1679.%20Max%20Number%20of%20K-Sum%20Pairs/README.md
 
-| Sliding Window                                                |          |        |      |
-| ------------------------------------------------------------- | -------- | ------ | ---- |
-| 643. Maximum Average Subarray I                               | Solution | Easy   | 詳解 |
-| 1456. Maximum Number of Vowels in a Substring of Given Length | Solution | Medium | 詳解 |
-| 1004. Max Consecutive Ones III                                | Solution | Medium | 詳解 |
-| 1493. Longest Subarray of 1's After Deleting One Element      | Solution | Medium | 詳解 |
+| Sliding Window                                                |                 |        |                         |
+| ------------------------------------------------------------- | --------------- | ------ | ----------------------- |
+| 643. Maximum Average Subarray I                               | [Solution][643] | Easy   | [詳解][643-explanation] |
+| 1456. Maximum Number of Vowels in a Substring of Given Length | Solution        | Medium | 詳解                    |
+| 1004. Max Consecutive Ones III                                | Solution        | Medium | 詳解                    |
+| 1493. Longest Subarray of 1's After Deleting One Element      | Solution        | Medium | 詳解                    |
+
+[643]: ./src/643.%20Maximum%20Average%20Subarray%20I/find_max_average.rs
+[643-explanation]: ./src/643.%20Maximum%20Average%20Subarray%20I/README.md
 
 | Prefix Sum                      |          |      |      |
 | ------------------------------- | -------- | ---- | ---- |

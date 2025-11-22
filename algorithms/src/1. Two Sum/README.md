@@ -30,7 +30,7 @@
 
 ## 解題
 
-### 使用雜湊表 (Hash Table)
+### 使用雜湊表
 
 ```rs
 impl Solution {

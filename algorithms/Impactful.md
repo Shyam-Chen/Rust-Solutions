@@ -131,14 +131,17 @@ Problems:
 | 394. Decode String                 | Solution | Medium | 詳解 |
 | 739. Daily Temperatures            | Solution | Medium | 詳解 |
 
-| Two Pointers                  |                |        |                        |
-| ----------------------------- | -------------- | ------ | ---------------------- |
-| 11. Container With Most Water | [Solution][11] | Medium | [詳解][11-explanation] |
-| 15. 3Sum                      | Solution       | Medium | 詳解                   |
-| 42. Trapping Rain Water       | Solution       | Easy   | 詳解                   |
+| Two Pointers                  |                 |        |                         |
+| ----------------------------- | --------------- | ------ | ----------------------- |
+| 11. Container With Most Water | [Solution][11]  | Medium | [詳解][11-explanation]  |
+| 15. 3Sum                      | Solution        | Medium | 詳解                    |
+| 42. Trapping Rain Water       | Solution        | Hard   | 詳解                    |
+| 283. Move Zeroes              | [Solution][283] | Easy   | [詳解][283-explanation] |
 
 [11]: ./src/11.%20Container%20With%20Most%20Water/max_area.rs
 [11-explanation]: ./src/11.%20Container%20With%20Most%20Water/README.md
+[283]: ./src/283.%20Move%20Zeroes/move_zeroes.rs
+[283-explanation]: ./src/283.%20Move%20Zeroes/README.md
 
 | Trie                              |                 |        |      |
 | --------------------------------- | --------------- | ------ | ---- |

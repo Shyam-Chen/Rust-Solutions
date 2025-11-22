@@ -74,7 +74,7 @@ impl Solution {
 
 ```
 
-### 使用雙指標 (Two Pointers)
+### 使用雙指標
 
 ```rs
 

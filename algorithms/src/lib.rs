@@ -39,6 +39,9 @@ mod _443_compress;
 #[path = "./605. Can Place Flowers/can_place_flowers.rs"]
 mod _605_can_place_flowers;
 
+#[path = "./643. Maximum Average Subarray I/find_max_average.rs"]
+mod _643_find_max_average;
+
 #[path = "./1071. Greatest Common Divisor of Strings/gcd_of_strings.rs"]
 mod _1071_gcd_of_strings;
 
