@@ -42,11 +42,20 @@ mod _605_can_place_flowers;
 #[path = "./643. Maximum Average Subarray I/find_max_average.rs"]
 mod _643_find_max_average;
 
+#[path = "./1004. Max Consecutive Ones III/longest_ones.rs"]
+mod _1004_longest_ones;
+
 #[path = "./1071. Greatest Common Divisor of Strings/gcd_of_strings.rs"]
 mod _1071_gcd_of_strings;
 
 #[path = "./1431. Kids With the Greatest Number of Candies/kids_with_candies.rs"]
 mod _1431_kids_with_candies;
+
+#[path = "./1456. Maximum Number of Vowels in a Substring of Given Length/max_vowels.rs"]
+mod _1456_max_vowels;
+
+#[path = "./1493. Longest Subarray of 1's After Deleting One Element/longest_subarray.rs"]
+mod _1493_longest_subarray;
 
 #[path = "./1679. Max Number of K-Sum Pairs/max_operations.rs"]
 mod _1679_max_operations;
