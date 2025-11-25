@@ -48,6 +48,7 @@
   - [貪婪 (Greedy)](./algorithms/Beginning.md#貪婪-greedy)
   - [位元操作 (Bit Manipulation)](./algorithms/Beginning.md#位元操作-bit-manipulation)
 - [Basic - LeetCode 75](./algorithms/Basic.md)
+  - [雙指標 (Two Pointers)](./algorithms/Basic.md#two-pointers)
 - [Advanced - Top Interview 150](./algorithms/Advanced.md)
 - [Impactful - Top 100 Liked](./algorithms/Impactful.md)
 
