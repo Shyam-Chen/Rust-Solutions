@@ -1,8 +1,6 @@
 {
-  "[rust]": {
-    "editor.tabSize": 4
-  },
   "editor.tabSize": 2,
+  "[rust]": { "editor.tabSize": 4 },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,

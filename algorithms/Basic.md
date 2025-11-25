@@ -71,10 +71,13 @@ Problems:
 [1493]: ./src/1493.%20Longest%20Subarray%20of%201's%20After%20Deleting%20One%20Element/longest_subarray.rs
 [1493-explanation]: ./src/1493.%20Longest%20Subarray%20of%201's%20After%20Deleting%20One%20Element/README.md
 
-| Prefix Sum                      |          |      |      |
-| ------------------------------- | -------- | ---- | ---- |
-| 1732. Find the Highest Altitude | Solution | Easy | 詳解 |
-| 724. Find Pivot Index           | Solution | Easy | 詳解 |
+| Prefix Sum                      |                  |      |                          |
+| ------------------------------- | ---------------- | ---- | ------------------------ |
+| 1732. Find the Highest Altitude | [Solution][1732] | Easy | [詳解][1732-explanation] |
+| 724. Find Pivot Index           | Solution         | Easy | 詳解                     |
+
+[1732]: ./src/1732.%20Find%20the%20Highest%20Altitude/largest_altitude.rs
+[1732-explanation]: ./src/1732.%20Find%20the%20Highest%20Altitude/README.md
 
 | Hash Map / Set                           |          |        |      |
 | ---------------------------------------- | -------- | ------ | ---- |

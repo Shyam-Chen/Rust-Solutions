@@ -194,6 +194,109 @@ fn main() {
 }
 ```
 
+### 前綴和 (Prefix Sum)
+
+計算區間和:
+
+```coffee
+sum(arr[l..r]) = prefix[r] - prefix[l]
+```
+
+```coffee
+計算陣列索引 1 到 2 (不含 3) 的區間和
+
+arr = [1,2,3,4]
+prefix = [0,1,3,6,10]
+
+sum(arr[1..3]) = prefix[3] - prefix[1]
+               = 6 - 1
+               = 5
+```
+
+```rs
+fn prefix_sum(arr: &[i32]) -> Vec<i32> {
+    // 先預留容量，避免迴圈中多次重新分配記憶體，所以不直接用 vec![0]
+    let mut prefix = Vec::with_capacity(arr.len() + 1);
+    prefix.push(0);
+
+    for &num in arr {
+        let last = *prefix.last().unwrap();
+        prefix.push(last + num);
+    }
+
+    prefix
+}
+
+fn main() {
+    let arr = vec![1, 2, 3, 4];
+    let prefix = prefix_sum(&arr);
+    println!("{prefix:?}"); // [0, 1, 3, 6, 10]
+
+    // 區間和 [1..3] = prefix[3] - prefix[1] = 6 - 1 = 5
+    println!(
+        "arr[1..3] 區間和: {:?} = {}",
+        &arr[1..3],
+        prefix[3] - prefix[1]
+    );
+}
+```
+
+### 差分 (Difference Array)
+
+```rs
+use std::ops::Range;
+
+fn build_diff(arr: &[i32]) -> Vec<i32> {
+    let n = arr.len();
+
+    let mut diff = vec![0; n];
+    diff[0] = arr[0];
+
+    for i in 1..n {
+        diff[i] = arr[i] - arr[i - 1];
+    }
+
+    diff
+}
+
+fn apply_update(diff: &mut [i32], range: Range<usize>, val: i32) {
+    let l = range.start;
+    let r = range.end;
+
+    diff[l] += val;
+
+    if r < diff.len() {
+        diff[r] -= val;
+    }
+}
+
+fn restore_array(diff: &[i32]) -> Vec<i32> {
+    let mut arr = vec![0; diff.len()];
+    arr[0] = diff[0];
+
+    for i in 1..diff.len() {
+        arr[i] = arr[i - 1] + diff[i];
+    }
+
+    arr
+}
+
+fn main() {
+    let arr = vec![1, 2, 3, 4, 5];
+
+    let mut diff = build_diff(&arr);
+    println!("{diff:?}");
+    // [1, 1, 1, 1, 1]
+
+    // 區間 [1..3] 加 10
+    apply_update(&mut diff, 1..3, 10);
+
+    let updated_arr = restore_array(&diff);
+    println!("{updated_arr:?}");
+    // [1, 12, 13, 4, 5]
+}
+```
+
 ## 鏈結串列 (Linked List)
 
 ### 單向鏈結串列 (Singly Linked List)

@@ -60,5 +60,8 @@ mod _1493_longest_subarray;
 #[path = "./1679. Max Number of K-Sum Pairs/max_operations.rs"]
 mod _1679_max_operations;
 
+#[path = "./1732. Find the Highest Altitude/largest_altitude.rs"]
+mod _1732_largest_altitude;
+
 #[path = "./1768. Merge Strings Alternately/merge_alternately.rs"]
 mod _1768_merge_alternately;
