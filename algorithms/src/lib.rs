@@ -42,6 +42,9 @@ mod _605_can_place_flowers;
 #[path = "./643. Maximum Average Subarray I/find_max_average.rs"]
 mod _643_find_max_average;
 
+#[path = "./724. Find Pivot Index/pivot_index.rs"]
+mod _724_pivot_index;
+
 #[path = "./1004. Max Consecutive Ones III/longest_ones.rs"]
 mod _1004_longest_ones;
 

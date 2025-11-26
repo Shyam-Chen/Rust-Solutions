@@ -167,7 +167,7 @@ Problems:
 | 211. Design Add and Search Words Data Structure | Solution        | Medium | 詳解 |
 | 212. Word Search II                             | Solution        | Hard   | 詳解 |
 
-[208]: ./src/solutions/_208_trie.rs
+[208]: ./src/208.%20Implement%20Trie%20(Prefix%20Tree)/trie.rs
 
 | Backtracking                              |          |        |      |
 | ----------------------------------------- | -------- | ------ | ---- |

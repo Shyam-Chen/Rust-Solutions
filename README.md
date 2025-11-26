@@ -48,9 +48,68 @@
   - [貪婪 (Greedy)](./algorithms/Beginning.md#貪婪-greedy)
   - [位元操作 (Bit Manipulation)](./algorithms/Beginning.md#位元操作-bit-manipulation)
 - [Basic - LeetCode 75](./algorithms/Basic.md)
+  - [陣列 / 字串 (Array / String)](./algorithms/Basic.md#array--string)
   - [雙指標 (Two Pointers)](./algorithms/Basic.md#two-pointers)
+  - [滑動視窗 (Sliding Window)](./algorithms/Basic.md#sliding-window)
+  - [前綴和 (Prefix Sum)](./algorithms/Basic.md#prefix-sum)
+  - 雜湊映射 / 集合 (Hash Map / Set)
+  - 堆疊 (Stack)
+  - 佇列 (Queue)
+  - 鏈結串列 (Linked List)
+  - Binary Tree - DFS
+  - Binary Tree - BFS
+  - Binary Search Tree
+  - Graphs - DFS
+  - Graphs - BFS
+  - Heap / Priority Queue
+  - 二分搜尋 (Binary Search)
+  - 回溯 (Backtracking)
+  - DP - 1D
+  - DP - Multidimensional
+  - Bit Manipulation
+  - 字典樹 (Trie)
+  - Intervals
+  - Monotonic Stack
 - [Advanced - Top Interview 150](./algorithms/Advanced.md)
+  - 陣列 / 字串 (Array / String)
+  - 雙指標 (Two Pointers)
+  - 滑動視窗 (Sliding Window)
+  - Matrix
+  - Hashmap
+  - Intervals
+  - Stack
+  - Linked List
+  - Binary Tree General
+  - Binary Tree BFS
+  - Binary Search Tree
+  - Graph General
+  - Graph BFS
+  - 字典樹 (Trie)
+  - 回溯 (Backtracking)
+  - 分治 (Divide & Conquer)
+  - Kadane's Algorithm
+  - Binary Search
+  - Heap
+  - Bit Manipulation
+  - Math
+  - 1D DP
+  - Multidimensional DP
 - [Impactful - Top 100 Liked](./algorithms/Impactful.md)
+  - 回溯 (Backtracking)
+  - Binary Search
+  - Binary Tree
+  - Dynamic Programming
+  - Graph
+  - Greedy
+  - Hashing
+  - Heap
+  - Linked Lists
+  - Matrix
+  - Sliding Window
+  - Stack
+  - Two Pointers
+  - Trie
+  - Misc
 
 ---
 

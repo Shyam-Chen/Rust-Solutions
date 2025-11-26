@@ -8,6 +8,8 @@ Ace Coding Interview with 75 Qs
 
 Problems:
 
+<a name="array--string"></a>
+
 | Array / String                                 |                  |        |                          |
 | ---------------------------------------------- | ---------------- | ------ | ------------------------ |
 | 1768. Merge Strings Alternately                | [Solution][1768] | Easy   | [詳解][1768-explanation] |
@@ -57,6 +59,8 @@ Problems:
 [1679]: ./src/1679.%20Max%20Number%20of%20K-Sum%20Pairs/max_operations.rs
 [1679-explanation]: ./src/1679.%20Max%20Number%20of%20K-Sum%20Pairs/README.md
 
+<a name="sliding-window"></a>
+
 | Sliding Window                                                |                  |        |                          |
 | ------------------------------------------------------------- | ---------------- | ------ | ------------------------ |
 | 643. Maximum Average Subarray I                               | [Solution][643]  | Easy   | [詳解][643-explanation]  |
@@ -73,13 +77,17 @@ Problems:
 [1493]: ./src/1493.%20Longest%20Subarray%20of%201's%20After%20Deleting%20One%20Element/longest_subarray.rs
 [1493-explanation]: ./src/1493.%20Longest%20Subarray%20of%201's%20After%20Deleting%20One%20Element/README.md
 
+<a name="prefix-sum"></a>
+
 | Prefix Sum                      |                  |      |                          |
 | ------------------------------- | ---------------- | ---- | ------------------------ |
 | 1732. Find the Highest Altitude | [Solution][1732] | Easy | [詳解][1732-explanation] |
-| 724. Find Pivot Index           | Solution         | Easy | 詳解                     |
+| 724. Find Pivot Index           | [Solution][724]  | Easy | [詳解][724-explanation]  |
 
 [1732]: ./src/1732.%20Find%20the%20Highest%20Altitude/largest_altitude.rs
 [1732-explanation]: ./src/1732.%20Find%20the%20Highest%20Altitude/README.md
+[724]: ./src/724.%20Find%20Pivot%20Index/pivot_index.rs
+[724-explanation]: ./src/724.%20Find%20Pivot%20Index/README.md
 
 | Hash Map / Set                           |          |        |      |
 | ---------------------------------------- | -------- | ------ | ---- |
